@@ -15,6 +15,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::group(['prefix' => 'admin'],function(){
+    
+    Route::resource('users','UsersController');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('user', function() {
+    return view('admin/users/mainReg');
+});
+
+Route::get('rol', function() {
+    return view('admin/roles/Mroles');
+});
+
+Route::get('materia', function() {
+    return view('admin/materias/Mmateria');
+});
+
+Route::get('search', function() {
+    return view('admin/search/Msearch');
+});
+
+Route::get('importar', function() {
+    return view('admin/importar/import');
+});
