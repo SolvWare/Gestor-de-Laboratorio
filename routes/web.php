@@ -15,27 +15,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin'],function(){
-    
-    Route::resource('users','UsersController');
+Route::get('login', function () {
+    return view('login/page/loginpage');
 });
-
-Route::get('user', function() {
-    return view('admin/users/mainReg');
+Route::get('importUsr', function () {
+    return view('admin/page/importpage');
 });
-
-Route::get('rol', function() {
-    return view('admin/roles/Mroles');
+Route::get('registUsr', function () {
+    return view('admin/page/registpage');
 });
-
-Route::get('materia', function() {
-    return view('admin/materias/Mmateria');
+Route::get('search', function () {
+    return view('admin/page/searchpage');
 });
-
-Route::get('search', function() {
-    return view('admin/search/Msearch');
+Route::get('aux', function () {
+    return view('auxiliar/page/auxpage');
 });
-
-Route::get('importar', function() {
-    return view('admin/importar/import');
+Route::get('docent', function () {
+    return view('docent/page/docentpage');
+});
+Route::get('student', function () {
+    return view('student/page/studentpage');
 });

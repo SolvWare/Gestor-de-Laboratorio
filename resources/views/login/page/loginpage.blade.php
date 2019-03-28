@@ -16,7 +16,7 @@
             @include('inicio.menu')
         </div>
         <div class="w-100 d-inline-block mr-1 ml-1">
-            @include('inicio.welcome')
+            @include('login.container.login')
         </div>
         <div class="w-25 d-inline-block">
             @include('inicio.link')
@@ -30,4 +30,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-

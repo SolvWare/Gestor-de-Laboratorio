@@ -13,10 +13,10 @@
     </header>
     <section class="d-flex text-white h-75 mt-1">
         <div class="w-25 d-inline-block">
-            @include('inicio.menu')
+            @include('admin.container.menu')
         </div>
         <div class="w-100 d-inline-block mr-1 ml-1">
-            @include('inicio.welcome')
+            @include('admin.container.import')
         </div>
         <div class="w-25 d-inline-block">
             @include('inicio.link')
@@ -30,4 +30,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-
