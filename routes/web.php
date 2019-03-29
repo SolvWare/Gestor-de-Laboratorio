@@ -15,27 +15,55 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin'],function(){
-    
-    Route::resource('users','UsersController');
+Route::get('home', function () {
+    return view('inicio/home');
 });
 
-Route::get('user', function() {
-    return view('admin/users/mainReg');
+Route::get('login', function () {
+    return view('login/page/viewlogin');
 });
 
-Route::get('rol', function() {
+Route::get('estudiante', function () {
+    return view('estudiante/page/viewest');
+});
+
+
+Route::get('docente', function() {
+    return view('docente/page/viewdoc');
+});
+
+Route::get('auxiliar', function() {
+    return view('auxiliar/page/viewaux');
+});
+
+/* Route::get('rol', function() {
     return view('admin/roles/Mroles');
 });
 
 Route::get('materia', function() {
     return view('admin/materias/Mmateria');
 });
-
+ */
 Route::get('search', function() {
-    return view('admin/search/Msearch');
+    return view('admin/page/searchpage');
 });
 
-Route::get('importar', function() {
-    return view('admin/importar/import');
+Route::get('import', function() {
+    return view('admin/page/importpage');
+});
+
+Route::get('regist', function() {
+    return view('admin/page/registpage');
+});
+
+Route::get('adm', function() {
+    return view('admin/page/viewadm');
+});
+
+Route::get('mater', function() {
+    return view('admin/page/materiapage');
+});
+
+Route::get('rol', function() {
+    return view('admin/page/rolpage');
 });

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,7 +29,7 @@
 
     <section class="d-flex text-white h-75 mt-1">
         <div class="w-25 d-inline-block">
-            @include('inicio.menu')
+            @include('auxiliar.page.menu')
         </div>
         <div class="w-100 d-inline-block mr-1 ml-1">
             @include('inicio.welcome')
