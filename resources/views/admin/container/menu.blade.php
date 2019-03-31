@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header" role="tab" id="headingOne">
                     <h5 class="mb-0">
-                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="text-dark">
                             Roles
                         </a>
                     </h5>
@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="card-header" role="tab" id="headingTwo">
                     <h5 class="mb-0">
-                        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <a class="collapsed text-dark" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             Materias
                         </a>
                     </h5>
@@ -38,7 +38,7 @@
             <div class="card">
                 <div class="card-header" role="tab" id="headingThree">
                     <h5 class="mb-0">
-                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <a class="collapsed text-dark" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Usuarios
                         </a>
                     </h5>

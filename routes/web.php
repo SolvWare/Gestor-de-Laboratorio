@@ -60,7 +60,7 @@ Route::get('adm', function() {
     return view('admin/page/viewadm');
 });
 
-Route::get('mater', function() {
+Route::get('materia', function() {
     return view('admin/page/materiapage');
 });
 

@@ -5,7 +5,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     
-    <title> @yield ('title', 'Default' )Sesion Laboratorios</title>
+    <title>Sesion Laboratorio</title>
     
     
     <link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}" >

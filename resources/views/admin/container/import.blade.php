@@ -99,7 +99,7 @@
         Precione Continuar para volverlo a intentar
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Continuar</button>
+        <button type="button" class="btn btn-primary" >Continuar</button>
       </div>
     </div>
   </div>

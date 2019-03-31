@@ -1,3 +1,8 @@
 body {
-    background-color:#F6F5F5;
+    background-color:rgb(196, 207, 216);
   }
+
+.tam-list {
+  width: 80%;
+  margin-left: 10%;
+}

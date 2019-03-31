@@ -6,7 +6,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     
-    <title> @yield ('title', 'Default' )Sesion Laboratorios</title>
+    <title>Sesion Laboratorio</title>
     
     
     <link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}" >
@@ -29,7 +29,7 @@
 
     <section class="d-flex text-white h-75 mt-1">
         <div class="w-25 d-inline-block">
-            @include('docente.page.menu')
+            @include('docente.container.menu')
         </div>
         <div class="w-100 d-inline-block mr-1 ml-1">
             @include('inicio.welcome')
