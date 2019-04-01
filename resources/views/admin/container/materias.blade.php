@@ -42,8 +42,10 @@
             </thead>
             <tbody class=" table-active text-dark">
               <tr>
-                <th>2010010</th>
-                <td>Introduccion a la programacion</td>
+              <!--@foreach($materias as $materia)-->
+                <th>{{$materia->codigoM}}</th>
+                <td>{{$materia->nombreM}}</td>
+             <!-- @endforeach-->
               </tr>
               <tr>
                 <th>2010003</th>

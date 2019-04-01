@@ -18,4 +18,5 @@ Route::get('/', function () {
 
 
 Route:: get('/materia', 'materiacontroller@create');
+Route:: get('/materia/{id}', 'materiacontroller@getmateria');
 Route::post('/materia', 'materiacontroller@store');

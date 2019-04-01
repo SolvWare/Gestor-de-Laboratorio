@@ -8,12 +8,13 @@ class materia extends Model
 {  
     public function grupos()
     {
-        return  $this->hasMany(grupo::class);
+        return  $this->hasMany('App\grupo');
     }
-    public function usuarios()
+    /*
+   / public function usuarios()
     {
         return  $this->belongsToMany(usuario::class);
     }
-    
+    */
    protected $fillable =['codigoM','nombreM'];
 }

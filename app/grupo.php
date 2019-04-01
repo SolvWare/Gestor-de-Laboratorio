@@ -8,7 +8,7 @@ class grupo extends Model
 {  
     public function materia ()
     {
-        return  $this->belongsTo(materia::class);
+        return  $this->belongsTo('App\materia');
     }
     
 }

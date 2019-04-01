@@ -21,9 +21,12 @@ class materiacontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('admin/page/materiapage');
+    public function create(Request $request)
+    {    
+        //dd($request);
+        $materias = materia::all();
+        // return $materias;
+        return view('admin/page/materiapage')->with('materias',$materias);
     }
 
     /**
@@ -41,6 +44,7 @@ class materiacontroller extends Controller
         ]);
 
         return redirect()->back();
+        return Redirect::to('materias')->with('notice', 'El usuario ha sido creado correctamente.');
         
         /*
         $materia = new materia();
@@ -49,7 +53,12 @@ class materiacontroller extends Controller
         $materia->save();
         */
     }
-
+    public function getmateria(Request $request, $id )
+    {
+        $materia = materia::find($id);
+        return $materia;
+        
+    }
     /**
      * Display the specified resource.
      *
