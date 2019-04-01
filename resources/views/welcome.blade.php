@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,6 +65,7 @@
         </style>
     </head>
     <body>
+    <!--
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -76,18 +77,20 @@
                     @endif
                 </div>
             @endif
-
+            -->
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="cn">
+                   laravel
+                   <form action=""method="POST">
+                    codigo materia <br>
+                    <input type="" name="cod" value=""><br>
+                    nombre materia <br>
+                    <input type="text"name="nom" value=""><br>
+                    <input type="submit" value=" registrar">
+                    </form>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div>
+                 
                 </div>
             </div>
         </div>
