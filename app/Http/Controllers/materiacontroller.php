@@ -44,9 +44,9 @@ class materiacontroller extends Controller
        */
       /*
              materia::create([
-            'grupoM' => $request->get('grupoM'),
             'codigoM' => $request->get('codigoM'),
             'nombreM' => $request->get('nombreM'),
+            'grupoM' => $request->get('grupoM'),
             
         ]);
 
@@ -59,8 +59,7 @@ class materiacontroller extends Controller
         $materia->nombreM = $request->input('nombreM');
         $materia->grupoM = $request->input('grupoM');
         $materia->save();
-        return redirect()->back();
-        
+        return view('admin/page/registmatpage')->with('materia',$materia);
     }
     public function getmateria(Request $request, $id )
     {

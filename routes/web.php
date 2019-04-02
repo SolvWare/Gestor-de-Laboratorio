@@ -20,7 +20,9 @@ Route::get('/', function () {
 Route:: get('/materia', 'materiacontroller@create');
 Route:: get('/materia/{id}', 'materiacontroller@getmateria');
 Route::post('/materia', 'materiacontroller@store');
-Route::post('/materia1', 'materiacontroller@show');
+//Route::post('/materia1', 'materiacontroller@show');
+//Route:: get('/materia2', 'materiacontroller@edit');
+
 
 Route::get('/listamaterias', 'materiacontroller@listarmateria');
 Route::get('viewDoc', function () {

@@ -29,7 +29,7 @@
                         </div> 
                         </div>
                     </div>
-                  <input class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" action="{{url('materias')}}" type="submit" data-toggle="modal" acdata-target="#exampleModal3" value="REGISTRAR">
+                  <input class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" action="{{url('listamaterias')}}" type="submit" data-toggle="modal" acdata-target="#exampleModal3" value="REGISTRAR">
                 </form>
             </div>
         </div>
@@ -43,11 +43,13 @@
             </tr>
             </thead>
             <tbody>
+              
                 <tr class="table-active">
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+                <td>{{$materia->codigoM}}</td>
+                <td>{{$materia->nombreM}}</td>
+                <td>{{$materia->grupoM}}</td>
+                </tr>
+              
             </tbody>
         </table>
         </div>

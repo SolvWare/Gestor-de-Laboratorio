@@ -17,12 +17,12 @@
                             </tr>
                         </thead>
                         <tbody>    
-                          @foreach($materias as $materia)
+                          @foreach($materias as $materiaa)
                           <tr class="table-active">
-                                <th>{{$materia->codigoM}}</th>
-                                <th>{{$materia->nombreM}}</th>
-                                <th>{{$materia->grupoM}}</th>
-                                <th><a href="/materia">edit</a></th>
+                                <th>{{$materiaa->codigoM}}</th>
+                                <th>{{$materiaa->nombreM}}</th>
+                                <th>{{$materiaa->grupoM}}</th>
+                                <th><a href="">edit</a></th>
                                 <th><a type="button" data-toggle="modal" data-target="#exampleModal3">des</a></th>
                             </tr>
                            @endforeach
