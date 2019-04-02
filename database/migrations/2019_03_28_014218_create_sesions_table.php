@@ -15,12 +15,11 @@ class CreateSesionsTable extends Migration
     {
         Schema::create('sesions', function (Blueprint $table) {
             $table->increments('id');
-            //$table->integer('idSes')->unsigned();
-            $table->integer('coSis')->unsigned();
-            $table->integer('idH')->unsigned();
-            $table->date('fechaSes');
-            $table->foreign('coSis')->references('id')->on('usuarios');
-           // $table->foreign('idH')->references('id')->on('horarios');
+            $table->dateTimeTz('dateSes');
+            $table->integer('usr_id')->unsigned();
+            $table->foreign('usr_id')->references('id')->on('usuarios');
+            $table->integer('hor_id')->unsigned();
+            $table->foreign('hor_id')->references('id')->on('horarios');
             $table->timestamps();
         });
     }
@@ -34,5 +33,4 @@ class CreateSesionsTable extends Migration
     {
         Schema::dropIfExists('sesions');
     }
-    
-} 
+}

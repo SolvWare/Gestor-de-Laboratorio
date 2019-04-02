@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGruposTable extends Migration
+class CreateMateriasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateGruposTable extends Migration
      */
     public function up()
     {
-        Schema::create('grupos', function (Blueprint $table) {
+        Schema::create('materias', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('codigM')->unsigned();
-            $table->string('numeroGrup', 3);
-            $table->foreign('codigM')->references('id')->on('materias');
+            $table->integer('codigoM')->unsigned();
+            $table->string('nombreM', 50);
+            $table->integer('grupoM')->unsigned();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateGruposTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('grupos');
+        Schema::dropIfExists('materias');
     }
 }

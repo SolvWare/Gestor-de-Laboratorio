@@ -24,9 +24,9 @@ class materiacontroller extends Controller
     public function create(Request $request)
     {    
         //dd($request);
-        $materias = materia::all();
+       //$materias =  materia::all();
         // return $materias;
-        return view('admin/page/materiapage')->with('materias',$materias);
+        return view('admin/page/registmatpage');//->with('materias',$materias);
     }
 
     /**
@@ -36,22 +36,31 @@ class materiacontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        
-        materia::create([
+    {   /*
+        $this->validate($request,[
+            'codigoM' => 'required|max:3',
+            'nombreM' => 'required|max:50'
+        ]);
+       */
+      /*
+             materia::create([
+            'grupoM' => $request->get('grupoM'),
             'codigoM' => $request->get('codigoM'),
-            'nombreM' => $request->get('nombreM')
+            'nombreM' => $request->get('nombreM'),
+            
         ]);
 
         return redirect()->back();
-        return Redirect::to('materias')->with('notice', 'El usuario ha sido creado correctamente.');
+        //return Redirect::to('materia')->with('notice', 'El usuario ha sido creado correctamente.');
+        */
         
-        /*
         $materia = new materia();
         $materia->codigoM = $request->input('codigoM');
-        $materia->nombreM = $request->input('nonbreM');
+        $materia->nombreM = $request->input('nombreM');
+        $materia->grupoM = $request->input('grupoM');
         $materia->save();
-        */
+        return redirect()->back();
+        
     }
     public function getmateria(Request $request, $id )
     {
@@ -59,6 +68,12 @@ class materiacontroller extends Controller
         return $materia;
         
     }
+     public function listarmateria()
+     {
+        $materias =  materia::all();
+        // return $materias;
+        return view('admin/page/ledmatpage')->with('materias',$materias);
+     }
     /**
      * Display the specified resource.
      *
@@ -67,7 +82,9 @@ class materiacontroller extends Controller
      */
     public function show($id)
     {
-        //
+            $materias = materia::find($id);
+            return View('admin/page/registmatpage')->with('materias', $materias);
+         
     }
 
     /**

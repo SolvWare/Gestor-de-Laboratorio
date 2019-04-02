@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class materia extends Model
-{  
+{  /*
     public function grupos()
     {
         return  $this->hasMany('App\grupo');
@@ -16,5 +16,5 @@ class materia extends Model
         return  $this->belongsToMany(usuario::class);
     }
     */
-   protected $fillable =['codigoM','nombreM'];
+   protected $fillable =['grupoM, codigoM','nombreM'];
 }

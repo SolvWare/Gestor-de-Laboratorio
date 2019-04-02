@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMateriasTable extends Migration
+class CreateAsumsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateMateriasTable extends Migration
      */
     public function up()
     {
-        Schema::create('materias', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('codigoM')->unsigned();
-            $table->string('nombreM', 50);
+        Schema::create('asums', function (Blueprint $table) {
+            $table->integer('mat_id')->unsigned();
+            $table->foreign('mat_id')->references('id')->on('materias');
+            $table->integer('usr_id')->unsigned();
+            $table->foreign('usr_id')->references('id')->on('usuarios');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateMateriasTable extends Migration
      */
     public function down()
     {
-       Schema::dropIfExists('materias');
+        Schema::dropIfExists('asums');
     }
-} 
+}

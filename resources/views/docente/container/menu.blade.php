@@ -1,45 +1,13 @@
-<div class="">
-    <div class="text-center bg-info p-1">
-        <h4>Menú principal</h4>
+<div class="z-depth-1">
+    <div class="text-center blue p-1">
+        <h2>Menú principal</h2>
     </div>
     <div>
-        <div id="accordion" role="tablist">
-            <div class="card">
-                <div class="card-header" role="tab" id="headingOne">
-                    <h5 class="mb-0">
-                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Materias
-                        </a>
-                    </h5>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" role="tab" id="headingTwo">
-                    <h5 class="mb-0">
-                        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Horarios
-                        </a>
-                    </h5>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" role="tab" id="headingThree">
-                    <h5 class="mb-0">
-                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Estudiantes
-                        </a>
-                    </h5>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" role="tab" id="headingThree">
-                    <h5 class="mb-0">
-                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Portafolio
-                        </a>
-                    </h5>
-                </div>
-            </div>
-        </div>
+        <nav class="nav nav-pills flex-column">
+            <a class="nav-link" href="#item-1">Materias</a>
+            <a class="nav-link" href="#item-2">Horarios</a>
+            <a class="nav-link" href="#item-3">Estudiantes</a>
+            <a class="nav-link" href="#item-4">Portafolio</a>
+        </nav>
     </div>
 </div>

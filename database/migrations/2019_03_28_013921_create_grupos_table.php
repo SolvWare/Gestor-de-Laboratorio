@@ -1,22 +1,23 @@
 <?php
-/*
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRolsTable extends Migration
+class CreateGruposTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
-     *
+     */
     public function up()
     {
-        Schema::create('rols', function (Blueprint $table) {
+        Schema::create('grupos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idRol')->unsigned();
-            $table->string('nombreRol',40);
+            $table->string('numeroGrup', 2);
+            $table->integer('mat_id')->unsigned();
+            $table->foreign('mat_id')->references('id')->on('materias');
             $table->timestamps();
         });
     }
@@ -25,9 +26,9 @@ class CreateRolsTable extends Migration
      * Reverse the migrations.
      *
      * @return void
-     *
-   / public function down()
+     */
+    public function down()
     {
-        Schema::dropIfExists('rols');
+        Schema::dropIfExists('grupos');
     }
-}  */
+}

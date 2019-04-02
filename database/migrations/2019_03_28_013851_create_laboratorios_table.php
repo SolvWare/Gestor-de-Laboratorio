@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMatsUsrsTable extends Migration
-{ 
+class CreateLaboratoriosTable extends Migration
+{
     /**
      * Run the migrations.
      *
@@ -13,15 +13,11 @@ class CreateMatsUsrsTable extends Migration
      */
     public function up()
     {
-        Schema::create('mats_usrs', function (Blueprint $table) {
+        Schema::create('laboratorios', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('matId')->unsigned();
-            $table->integer('coSi')->unsigned();
-            $table->foreign('matId')->references('id')->on('materias');
-            $table->foreign('coSi')->references('id')->on('usuarios');
+            $table->string('nombreLab',40);
+            $table->integer('capacidadLab');
             $table->timestamps();
-
-           
         });
     }
 
@@ -32,7 +28,6 @@ class CreateMatsUsrsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mats_usrs');
+        Schema::dropIfExists('laboratorios');
     }
-    
-}  
+}

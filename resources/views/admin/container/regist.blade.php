@@ -1,84 +1,96 @@
-<div>    
-    <div class="bg-dark text-center p-1">
-        <h4>Registro de Usuarios</h4>
-    </div>
-    <div class="text-center bg-info p-1 mt-1">
-        <div class="h-100 w-50 d-inline-block" >
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Codigo SIS</label>
-                <div class="col-sm-8">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                </div>
+<div class="">
+  <div class="card">
+    <h2 class="card-header blue white-text text-center p-2">
+    Registro de Usuarios
+    </h2>
+    <div class="d-flex justify-content-center pt-0">
+      <div class="w-50">
+        <form class="text-center" style="color: #757575;">
+          <div class="form-row">
+            <div class="col">
+              <div class="md-form mb-1">
+                <input type="text" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+                <label for="materialRegisterFormPassword">Codigo SIS</label>
+                <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted">
+                  9 caracteres numericos
+                </small>
+              </div>
             </div>
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">CI</label>
-                <div class="col-sm-8">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                </div>
+            <div class="col">
+              <div class="md-form mb-1">
+                <input type="text" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+                <label for="materialRegisterFormPassword">CI</label>
+                <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted">
+                  7 caracteres numericos
+                </small>
+              </div>
             </div>
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre</label>
-                <div class="col-sm-8">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <div class="md-form mt-3 mb-3">
+                <input type="text" id="materialRegisterFormName" class="form-control">
+                <label for="materialRegisterFormName">Nombre</label>
+              </div>
             </div>
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Apellido</label>
-                <div class="col-sm-8">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                </div>
+            <div class="col">
+              <div class="md-form mt-3 mb-3">
+                <input type="text" id="materialRegisterFormLastName" class="form-control">
+                <label for="materialRegisterFormLastName">Apellido</label>
+              </div>
             </div>
-        </div>
-        <div class="h-100 w-25 d-inline-block">
-            <div class=" p-1">
-                <select class="cust om-select">
-                    <option selected>Escoger Rol</option>
-                    <option value="1">Docente</option>
-                    <option value="2">Auxiliar</option>
-                    <option value="3">Docente</option>
-                </select>
-            </div>
-            <div class=" p-1">
-                <select class="custom-select">
-                    <option selected>Escoger Materia</option>
-                    <option value="1">Intro</option>
-                    <option value="2">Elementos</option>
-                    <option value="3">Taller</option>
-                </select>
-            </div>
-            <div class=" p-1">
-                <select class="custom-select">
-                    <option selected>Escoger Grupo</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-sm-10 offset-sm-2">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">
-                Cargar Archivo 
-            </button>
-        </div>
+          </div>
+          <div class="p-1">
+            <select class="custom-select">
+              <option selected>Escoger Rol</option>
+              <option value="1">Docente</option>
+              <option value="2">Auxiliar</option>
+              <option value="3">Docente</option>
+            </select>
+          </div>
+          <div class="p-1">
+            <select class="custom-select">
+              <option selected>Escoger Materia</option>
+              <option value="1">Intro</option>
+              <option value="2">Elementos</option>
+              <option value="3">Taller</option>
+            </select>
+          </div>
+          <div class="p-1">
+            <select class="custom-select">
+              <option selected>Escoger Grupo</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="button" data-toggle="modal" data-target="#exampleModal3">Registrar</button>
+        </form>
+      </div>
     </div>
     <div class="mt-1">
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="table-active">
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                </tr>
-            </tbody>
-        </table>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Codigo SIS</th>
+            <th>CI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Rol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-active">
+            <th>65465465465</th>
+            <th>5546464</th>
+            <th>Otto</th>
+            <th>Simpson</th>
+            <th>Estudiante</th>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>
 
 <!-- Modal -->

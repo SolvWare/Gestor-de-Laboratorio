@@ -15,12 +15,10 @@ class CreateUsuariosTable extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('codSis')->unsigned();
-            //$table->integer('roId')->unsigned();
+            $table->integer('codSis');
             $table->integer('ciUsr');
             $table->string('nombreUsr', 30);
             $table->string('aplellidoUsr', 30);
-           // $table->foreign('roId')->references('idRol')->on('rols');
             $table->timestamps();
         });
     }
@@ -34,5 +32,4 @@ class CreateUsuariosTable extends Migration
     {
         Schema::dropIfExists('usuarios');
     }
-    
 }

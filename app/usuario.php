@@ -5,8 +5,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class usuario extends Model
-{  
-    public function materias()
+{  /*
+   // public function materias()
     {
         return  $this->belongsToMany(materia::class);
     }
@@ -19,5 +19,5 @@ class usuario extends Model
     {
         return  $this->hasMany(sesion::class);
     }
-    
+    */
 }

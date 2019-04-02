@@ -1,45 +1,50 @@
-<div>    
-    <div class="bg-dark text-center p-1">
-        <h4>Buscar Usuarios</h4>
-    </div>
-    <div class="text-center p-1">
-        <div class="w-25 d-inline-block text-center">
-            <img class="img-thumbnail" src="https://cdn.icon-icons.com/icons2/20/PNG/128/business_application_addmale_useradd_insert_add_user_client_2312.png" alt="Thumbnail image">
+<div class="">
+  <div class="card">
+    <h2 class="card-header blue white-text text-center p-2">
+      Importar Usuarios
+    </h2>
+    <div class="d-flex justify-content-center pt-2">
+      <div class="w-50">
+        <div class="text-center pb-2">
+          <img src="https://images.vexels.com/media/users/3/132065/isolated/preview/967962d3aac34869f1bec88ea89f573b-buscar-icono-del-c--rculo-azul-by-vexels.png" width="100" height="100" class="img-fluid" alt="Responsive image">
         </div>
-        <div class="w-50 d-inline-block">
-            <select class="custom-select">
-                <option selected="">Buscar por</option>
-                <option value="1">Codigo</option>
-                <option value="2">CI</option>
-                <option value="3">Nombre</option>
-                <option value="3">Apellido</option>
-            </select>
-            <div class="p-1">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">
-                    Buscar
-                </button>
-            </div>
+        <div class="">
+          <form class="form-inline ">
+            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </form>
         </div>
+      </div>
     </div>
-    <div>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="table-active">
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="mt-1">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Codigo SIS</th>
+            <th>CI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Rol</th>
+            <th>Editar</th>
+            <th>Deshabilitar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-active">
+            <th>65465465465</th>
+            <th>5546464</th>
+            <th>Otto</th>
+            <th>Simpson</th>
+            <th>Estudiante</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>
+
 <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModal4Label" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

@@ -1,31 +1,35 @@
-<div class="bg-info">
-    <div class="nav justify-content-center h-75  text-light">
-        <h1 class="align-self-center">Sesiones de Laboratorios</h1>
+<div class="primary-color-dark">
+    <div class="pt-1 pl-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/UMSS.png" width="15" height="15" class="img-fluid" alt="Responsive image">
+        <a class="brand" style="color:white" >UNIVERSIDAD MAYOR DE SAN SIMON</a>                
     </div>
-    <nav class="navbar navbar-expand-sm h-25 text-light" >
-        <a class="nav-link  rounded btn-outline-light" href="#">Ing. Sistemas</a>
-        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    
+    <div class="">
+        <h1 class="text-center" style="color:white">Sesiones de Laboratorios</h1>
+    </div>
 
-        <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link rounded btn-outline-light" href="#" style="color:white;">Docentes <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link rounded btn-outline-light" href="#" style="color:white;">Materias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link rounded btn-outline-light" href="#" style="color:white;">Laboratorios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link rounded btn-outline-light" href="#" style="color:white;">Enlaces</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-outline-light text-white my-2 my-sm-0" type="submit">Login</button>
-            </form>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand active" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="btn btn-outline-primary waves-effect" href="/viewDoc">Docentes <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-primary waves-effect" href="/viewMat">Materias</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-primary waves-effect" href="/viewLab">Laboratorios</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="/login">Iniciar Sesion</a>
+          </form>
         </div>
-    </nav>
+      </nav>
+      
 </div>
