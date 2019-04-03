@@ -64,6 +64,8 @@ Route::get('mater', function() {
     return view('admin/page/materiapage');
 });
 
+Route::resource('rol','RolController');
+
 Route::get('rol', function() {
     return view('admin/page/rolpage');
 });

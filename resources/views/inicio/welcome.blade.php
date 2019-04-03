@@ -2,7 +2,7 @@
     <div class="text-center bg-info p-1">
         <h2>Bienvenido al sistema de practicas de laboratorio</h2>
     </div>
-    <div class="p-2" style="height: 350px">
+    <div class="p-4 container" style="height: 350px">
         <div class="h-100 w-100 d-inline-block">
             <p class="text-dark">
                 Le ofrece información amplia, rápida y totalmente actualizada sobre el Sistema de Información Estudiantil de la Universidad Mayor de San Simón. <br>

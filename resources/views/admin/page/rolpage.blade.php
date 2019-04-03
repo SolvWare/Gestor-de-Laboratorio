@@ -14,6 +14,9 @@
 </head>
 <body class="h-100">
     <header class="h-25">
+	<?php use App\rol;
+			$rol = rol::all();
+	?>
         @include('inicio.nav')
     </header>
     <section class="d-flex text-white h-75 mt-1">
@@ -21,7 +24,10 @@
             @include('admin.container.menu')
         </div>
         <div class="w-100 d-inline-block mr-1 ml-1">
-            @include('admin.container.roles')
+			<div>
+			@include('admin.container.rolFile.create')
+            @include('admin.container.rolFile.roles')
+			</div>
         </div>
         <div class="w-25 d-inline-block">
             @include('inicio.link')
@@ -35,4 +41,3 @@
     <script src="{{ asset ('plugins/bootstrap/js/bootstrap.js') }}"></script>
 </body>
 </html>
-
