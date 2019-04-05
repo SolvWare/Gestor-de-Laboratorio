@@ -1,22 +1,22 @@
-<div class="">
-    <div class="text-center bg-info p-1">
-        <h4>Menú principal</h4>
+<div class="z-depth-1">
+    <div class="text-center blue p-1">
+        <h2>Menú principal</h2>
     </div>
     <div>
         <div id="accordion" role="tablist">
-            <div class="card">
+            <div class="">
                 <div class="card-header" role="tab" id="headingOne">
                     <h5 class="mb-0">
-                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <a class="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Roles
                         </a>
                     </h5>
                 </div>
               
-                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                     <ul class="list-group">
-                        <li class="list-group-item bg-dark">Registrar</li>
-                        <li class="list-group-item bg-dark">Listar Deshabilitar</li>
+                        <li class="list-group-item stylish-color"><a href="/registRol">Registrar</a></li>
+                        <li class="list-group-item stylish-color"><a href="/ledRol">Listar Editar Deshabilitar</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,8 +30,8 @@
                 </div>
                 <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <ul class="list-group">
-                        <li class="list-group-item bg-dark">Registar</li>
-                        <li class="list-group-item bg-dark">Listar Deshabilitar</li>
+                        <li class="list-group-item stylish-color"><a href="/registMat">Registar</a></li>
+                        <li class="list-group-item stylish-color"><a href="/ledMat">Listar Editar Deshabilitar</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,12 +45,14 @@
                 </div>
                 <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
                     <ul class="list-group">
-                        <li class="list-group-item bg-dark">Importar</li>
-                        <li class="list-group-item bg-dark">Registrar</li>
-                        <li class="list-group-item bg-dark">Buscar</li>
+                        <li class="list-group-item stylish-color"><a href="/importUsr">Importar</a></li>
+                        <li class="list-group-item stylish-color"><a href="/registUsr">Registrar</a></li>
+                        <li class="list-group-item stylish-color"><a href="/search">Buscar</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    
+
 </div>

@@ -1,69 +1,38 @@
-<div>    
-    <div class="bg-dark text-center p-1">
-        <h4>Importar Usuarios</h4>
-    </div>
-    <div class="text-center p-1">
-        <div class="w-25 d-inline-block text-center">
-            <img class="img-thumbnail" src="https://cdn.icon-icons.com/icons2/20/PNG/128/business_application_addmale_useradd_insert_add_user_client_2312.png" alt="Thumbnail image">
-        </div>
-        <div class="w-50 d-inline-block">
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFile">
-                <label class="custom-file-label" for="customFile">Choose file</label>
-            </div>
-            <div class="p-2">
+<div class="">
+    <div class="card">
+      <h2 class="card-header blue white-text text-center p-2">
+      Importar Usuarios
+      </h2>
+      <div class="d-flex justify-content-center pt-2">
+        <div class="w-50">
+          <div class="text-center pb-2">
+            <img src="https://cdn2.iconfinder.com/data/icons/flat-file-types-1-1/300/icon_file-CSV_plano-512.png" width="100" height="100" class="img-fluid" alt="Responsive image">
+          </div>
+          <div class="custom-file">
+              <input type="file" class="custom-file-input" id="customFile">
+              <label class="custom-file-label" for="customFile">Escoger Archivo</label>
+              
+              <form action="{{ url('importUsr') }}" method="POST" enctype="multipart/form-data">
+                  {{ csrf_field() }}
+                  Choose your xls/csv File : <input type="file" name="file" class="form-control">
+
+                  <input type="submit" class="btn btn-primary btn-lg" style="margin-top: 3%">
+              </form>
+          </div>
+          <!-- <div class="d-flex justify-content-center">
+            <div class=" p-2">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">
                   Cargar Archivo 
                 </button>
             </div>
+          </div> -->
         </div>
-    </div>
-    <div>
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                </tr><tr>
-                    <th scope="row">3</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                </tr>
-            </tbody>
-        </table>
+      </div>
     </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header bg-info">
@@ -103,4 +72,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
