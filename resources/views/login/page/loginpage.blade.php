@@ -20,10 +20,10 @@
     </header>
     <section class="d-flex text-white h-75 mt-1">
         <div class="w-25 d-inline-block">
-            @include('admin.container.menu')
+            @include('inicio.menu')
         </div>
         <div class="w-100 d-inline-block mr-1 ml-1">
-            @include('admin.container.import')
+            @include('login.container.login')
         </div>
         <div class="w-25 d-inline-block">
             @include('inicio.link')

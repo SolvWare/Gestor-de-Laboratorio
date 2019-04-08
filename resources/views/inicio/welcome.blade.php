@@ -1,34 +1,52 @@
-<div class="jumbotron p-2">
-    <div class="text-center">
-        <h1 class="display-4 text-dark">Bienvenido!</h1>
-        <h2 class="display-4 text-dark" >Sistema de practicas de laboratorio</h2>
+<div class="" >
+    <div class="text-center primary-color-dark p-1">
+        <h4>Bienvenido al sistema de practicas de laboratorio</h4>
     </div>
-    <div class="p-4 container" style="height: 350px">
-        <div class="h-100 w-100 d-inline-block">
-            <p class="text-dark">
-                Le ofrece servicio amplio, rápido y facil de manejar para las sesiones de practicas de laboratorio de las carreras de Ingenieria de Sistemas-Informatica  <br>
-            </p>
-            <p class="text-dark">
-                La información que se presenta esta destinada a las Autoridades Universitarias, Docentes, Estudiantes de la carrera de Ingenieria de sistemas-informatica.
-
-                Esta plataforma que se presenta esta dirigida a los laboratorios para las practicas de las materias de la carrera. <br>
-            </p>
-            <p class="text-dark">
-                El tipo de Información que se presenta esta relacionada con los laboratorios incluye: Materias, Grupos, horarios, portafolios y todo tipo de información útil. <br>                
-            </p>
-            <p class="text-dark">
-                Cualquier sugerencia por favor haganosla llegar a traves de la página de sugerencias.
-            </p>
+    <div data-spy="scroll" class="scrollspy-example z-depth-1 p-2 text-dark" style="position: relative; height: 350px; margin-top:0ex; overflow: auto;" data-target="#navbar-example3" data-offset="0">
+      <h4 id="item-1">Propósito</h4>
+        <div class="text-center pt-2">
+          <a><i class="fas fa-bullseye fa-7x black-text"></i></a>
+        </div>  
+        <p class="p-2">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+          qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+          mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim
+          qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic.
+          Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+        <h4 id="item-2">Misión</h4>
+        <div class="text-center pt-2">
+          <a><i class="fas fa-rocket fa-7x black-text"></i></i></a>
+        </div>  
+        <p class="p-2">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+          qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+          mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim
+          qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic.
+          Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+        <h4 id="item-3">Visión</h4>
+        <div class="text-center pt-2">
+          <a><i class="fas fa-eye fa-7x black-text"></i></i></a>
         </div>
-    </div>
+        <p class="p-2">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+          qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+          mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim
+          qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic.
+          Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+        <h4 id="item-4">Recomendaciones</h4>
+        <div class="text-center pt-2">
+          <a><i class="fas fa-shoe-prints fa-7x black-text"></i></i></a>
+        </div>
+        <p class="p-2">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+          qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+          mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim
+          qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic.
+          Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+        <h4 id="item-5">Contactos</h4>
+        <div class="text-center pt-2">
+          <a><i class="fas fa-phone-volume fa-7x black-text"></i></i></a>
+        </div>
+        <p class="p-2">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+          qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+          mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim
+          qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic.
+          Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+      </div>
 </div>
-
-<!-- <div class="jumbotron">
-    <h1 class="display-4">Bienvenido!</h1>
-    <h2 >Sistema de practicas de laboratorio</h2>
-    <hr class="my-4">
-    <p>La información que se presenta esta destinada a las Autoridades Universitarias, Docentes, Estudiantes de la carrera de Ingenieria de sistemas-informatica.
-
-        Esta plataforma que se presenta esta dirigida a los laboratorios para las practicas de las materias de la carrera</p>
-
-</div>  -->

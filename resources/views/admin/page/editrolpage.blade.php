@@ -23,7 +23,7 @@
             @include('admin.container.menu')
         </div>
         <div class="w-100 d-inline-block mr-1 ml-1">
-            @include('admin.container.import')
+            @include('admin.container.editrol')
         </div>
         <div class="w-25 d-inline-block">
             @include('inicio.link')

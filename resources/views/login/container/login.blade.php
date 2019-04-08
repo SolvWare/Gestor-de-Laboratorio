@@ -1,41 +1,31 @@
 <div class="">
-    <div class="col-6 offset-3 bg-secondary ">
-        <div class="panel panel-default">
-                    <div class="panel-heading text-center">
-                        Login
-                    </div>
-                    <div class="panel-body">
-                        <form class="form-horizontal" method="POST" action="">
-                            <div class="">
-                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-                                <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-                                </div>
-                            </div>
-                            <div class="">
-                                <label for="password" class="col-md-4 control-label">Password</label>
-                                <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control" name="password" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="remember"> Remember Me
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-8 col-md-offset-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        Login
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+    <div class="card ">
+        <div class="card-header primary-color-dark white-text text-center p-2">
+        <h4>Iniciar Sesion</h4>
         </div>
+        <div class="d-flex justify-content-center pt-2">
+            <div class="w-50">
+                <div class="text-center">
+                    <a><i class="fas fa-user-circle fa-7x green-text"></i></a>
+                </div>
+                <form class="text-center" style="color: #757575;">
+                    <div class="md-form">
+                    <input type="email" id="materialLoginFormEmail" class="form-control">
+                    <label for="materialLoginFormEmail">Codigo Sis</label>
+                    </div>
+                    <div class="md-form">
+                    <input type="password" id="materialLoginFormPassword" class="form-control">
+                    <label for="materialLoginFormPassword">CI</label>
+                    </div>
+                    <div class="d-flex justify-content-around">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="materialLoginFormRemember">
+                            <label class="form-check-label" for="materialLoginFormRemember">Recuerdame</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-info btn-rounded my-4 waves-effect z-depth-0" type="submit">Iniciar Sesion</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

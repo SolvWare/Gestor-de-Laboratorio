@@ -10,60 +10,67 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*public*/
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('viewDoc','UsuarioController@lisdoc');
+/*Route::get('viewDoc', function () {
+    return view('docpage');
+});*/
 
-Route::get('home', function () {
-    return view('inicio/home');
+Route::get('viewMat','MateriaController@lismat');
+/*Route::get('viewMat', function () {
+    return view('matpage');
+});*/
+Route::get('viewLab', function () {
+    return view('labpage');
 });
-
 Route::get('login', function () {
-    return view('login/page/viewlogin');
+    return view('login/page/loginpage');
 });
-
-Route::get('estudiante', function () {
-    return view('estudiante/page/viewest');
+/*Administrador*/
+Route::get('admi', function () {
+    return view('admin/page/admipage');
 });
-
-
-Route::get('docente', function() {
-    return view('docente/page/viewdoc');
+Route::get('registRol', function () {
+    return view('admin/page/registrolpage');
 });
-
-Route::get('auxiliar', function() {
-    return view('auxiliar/page/viewaux');
+Route::get('ledRol', function () {
+    return view('admin/page/ledrolpage');
 });
-
-/* Route::get('rol', function() {
-    return view('admin/roles/Mroles');
+Route::get('registMat', function () {
+    return view('admin/page/registmatpage');
 });
-
-Route::get('materia', function() {
-    return view('admin/materias/Mmateria');
+Route::get('ledMat', function () {
+    return view('admin/page/ledmatpage');
 });
- */
-Route::get('search', function() {
-    return view('admin/page/searchpage');
-});
-
-Route::get('import', function() {
+Route::get('importUsr', function () {
     return view('admin/page/importpage');
 });
-
-Route::get('regist', function() {
+Route::get('registUsr', function () {
     return view('admin/page/registpage');
 });
-
-Route::get('adm', function() {
-    return view('admin/page/viewadm');
+Route::get('search', function () {
+    return view('admin/page/searchpage');
+});
+/*Auxiliar*/
+Route::get('auxiliar', function () {
+    return view('auxiliar/page/auxpage');
+});
+/*Docente*/
+Route::get('docente', function () {
+    return view('docente/page/docentpage');
+});
+/*Estudiante*/
+Route::get('student', function () {
+    return view('student/page/studentpage');
 });
 
-Route::get('materia', function() {
-    return view('admin/page/materiapage');
-});
 
-Route::get('rol', function() {
-    return view('admin/page/rolpage');
-});
+
+Route::resource('rol', 'RolController');
+Route::resource('materia', 'MateriaController');
+Route::resource('usuario', 'UsuarioController');
+
+/*Route::get('/search','UsuarioController@search');*/
