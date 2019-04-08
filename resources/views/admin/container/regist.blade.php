@@ -69,27 +69,6 @@
         </form>
       </div>
     </div>
-    <div class="mt-1">
-      <table class="table table-bordered">
-        <thead >
-          <tr>
-            <th>Codigo SIS</th>
-            <th>CI</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Rol</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="">
-            <th>65465465465</th>
-            <th>5546464</th>
-            <th>Otto</th>
-            <th>Simpson</th>
-            <th>Estudiante</th>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    
   </div>
 </div>

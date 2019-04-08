@@ -19,7 +19,7 @@
     </div>
     <div class="mt-1">
       <table class="table">
-        <thead class="thead-dark">
+        <thead class=" thead-light">
           <tr>
             <th>Id</th>
             <th>Codigo SIS</th>

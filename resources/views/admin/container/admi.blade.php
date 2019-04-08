@@ -5,7 +5,7 @@
     <div class="">
         <div class="card">
             <div class="text-center p-2">
-                <a><i class="fas fa-user-tie fa-7x green-text"></i></a>
+                <a><i class="fas fa-user-tie fa-7x black-text"></i></a>
             </div>
             <div class="text-dark p-2">
                 <p>
