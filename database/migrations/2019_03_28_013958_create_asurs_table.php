@@ -15,7 +15,7 @@ class CreateAsursTable extends Migration
     {
         Schema::create('asurs', function (Blueprint $table) {
             $table->integer('rol_id')->unsigned();
-            $table->foreign('rol_id')->references('id')->on('rols');
+            $table->foreign('rol_id')->references('id_rol')->on('rols');
             $table->integer('usr_id')->unsigned();
             $table->foreign('usr_id')->references('id')->on('usuarios');
             $table->timestamps();

@@ -98,8 +98,14 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'codigoM' => [
+            'required' => 'El campo codigo es obligatorio',
+        ],
+        'nombreM' => [
+            'required' => 'El campo nombre es obligatorio',
+        ],
+        'grupoM' => [
+            'required' => 'El campo grupo es obligatorio',
         ],
     ],
 

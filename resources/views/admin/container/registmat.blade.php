@@ -5,31 +5,53 @@
         </h2>
         <div class="d-flex justify-content-center pt-0">
             <div class="w-50">
-            
-                <form  action="{{url('materia')}}" method="POST" class="text-center" style="color: #757575;">
-                  
+              
+                    <div class="row">
+                        <div class="col-lg-12 mt40">
+                            <div class="pull-left">
+                                <h2>Add Note</h2>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    @if(session('mensaje'))
+                        <div class="alert alert-success">
+                            <p>{{ session('mensaje') }}</p>
+                        </div>
+                    @endif
+                    <form  action="{{ url('materia') }}" method="POST" class="text-center" style="color: #757575;">
+                   {{ csrf_field() }}
                     <div class="md-form mt-4">
-                        <input type="text" id="materialRegisterFormCod" class="form-control" name="codigoM">
-                     
+                        <input type="text" id="materialRegisterFormCod" class="form-control" name="codigoM" value="{{ old('codigoM') }}">
+                        
                         <label for="materialRegisterFormCod">Codigo de Materia</label>
+                       
                     </div>
                     <div class="form-row">
                         <div class="col">
                         <div class="md-form mb-1">
-                            <input type="text" id="materialRegisterFormName" class="form-control" aria-describedby="materialRegisterFormNameHelpBlock" name="nombreM">
+                            <input type="text" id="materialRegisterFormName" class="form-control" aria-describedby="materialRegisterFormNameHelpBlock" name="nombreM" value="{{ old('nombreM') }}">
                             <label for="materialRegisterFormName">Nombre de la Materia</label>
+                           
                         </div>
                         </div>
                         <div class="col">
                         <div class="md-form mb-1">
-                            <input type="text" id="materialRegisterFormGrup" class="form-control" aria-describedby="materialRegisterFormGrupHelpBlock" name="grupoM">
-                           
+                            <input type="text" id="materialRegisterFormGrup" class="form-control" aria-describedby="materialRegisterFormGrupHelpBlock" name="grupoM" value="{{ old('grupoM') }}">
                             <label for="materialRegisterFormGrup">Número de grupos</label>
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         </div> 
                         </div>
                     </div>
-                  <input class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" action="{{url('listamaterias')}}" type="submit" data-toggle="modal" acdata-target="#exampleModal3" value="REGISTRAR">
+                  <input class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"  type="submit" data-toggle="modal" acdata-target="#exampleModal3" value="REGISTRAR">
                 </form>
             </div>
         </div>
@@ -45,9 +67,9 @@
             <tbody>
               
                 <tr class="table-active">
-                <td>{{$materia->codigoM}}</td>
-                <td>{{$materia->nombreM}}</td>
-                <td>{{$materia->grupoM}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 </tr>
               
             </tbody>

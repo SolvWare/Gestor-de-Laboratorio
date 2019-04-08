@@ -14,8 +14,10 @@
       <input type="" name="cod" value=""><br>
       nombre materia <br>
       <input type="text"name="nom" value=""><br>
+      grupo materia <br>
+      <input type="text"name="nom" value=""><br>
       <input type="submit" value=" registrar">
-      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+      < input type="hidden" name="_token" value="{{ csrf_token() }}">
  </form>
   </div>
 </body>

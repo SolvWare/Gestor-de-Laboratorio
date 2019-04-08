@@ -1,4 +1,4 @@
-<div class="" action="{{url('listamaterias')}}">
+<div class="" action="">
     <div class="card">
         <h2 class="card-header blue white-text text-center p-2">
         Listado de Materias
@@ -6,6 +6,22 @@
         <div class="d-flex justify-content-center pt-0">
             <div class="w-100">
                 <div class="mt-1">
+                <br><br>
+                    @if ($message = Session::get('success'))
+                        <div class="alert alert-success">
+                            <p>{{ $message }}</p>
+                        </div>
+                    @endif
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <strong>Opps!</strong> Something went wrong<br><br>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
@@ -17,13 +33,19 @@
                             </tr>
                         </thead>
                         <tbody>    
-                          @foreach($materias as $materiaa)
+                          @foreach($materiass as $materiaa)
                           <tr class="table-active">
                                 <th>{{$materiaa->codigoM}}</th>
                                 <th>{{$materiaa->nombreM}}</th>
                                 <th>{{$materiaa->grupoM}}</th>
-                                <th><a href="">edit</a></th>
-                                <th><a type="button" data-toggle="modal" data-target="#exampleModal3">des</a></th>
+                                <th><a href="{{ url('/materia/'.$materiaa->id.'/edit')}}">edit</a></th>
+                                <th>
+                               <form action="{{ url('/materia/'.$materiaa->id) }}" method="POST" role="form">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                    <button type="submit" class="btn btn-primary" onclick="return confirm('¿borrar?')">borrar</button>
+                                </form>
+                                </th>
                             </tr>
                            @endforeach
                         </tbody>

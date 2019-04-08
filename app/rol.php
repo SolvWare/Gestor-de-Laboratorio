@@ -11,4 +11,6 @@ class rol extends Model
         return  $this->hasMany(usuario::class);
     }
     */
+    protected $fillable = ['name_rol'];
+    protected $dates = ['created_at','updated_at'];
 }

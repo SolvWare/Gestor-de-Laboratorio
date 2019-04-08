@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\materia;
-class materiacontroller extends Controller
+
+class MateriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,13 @@ class materiacontroller extends Controller
      */
     public function index()
     {
-        //
+
+        $datos['materiass']=materia::orderBy('id', 'DESC')->paginate(3);
+        return view('admin.page.ledmatpage',$datos );
+        //dd($request);
+       //$materias =  materia::all();
+        // return $materias;
+        //return view('admin/page/registmatpage');//->with('materias',$materias);
     }
 
     /**
@@ -21,12 +28,11 @@ class materiacontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {    
-        //dd($request);
-       //$materias =  materia::all();
-        // return $materias;
-        return view('admin/page/registmatpage');//->with('materias',$materias);
+        $regi=materia::all();
+
+        return view('admin.page.registmatpage',$regi->last());
     }
 
     /**
@@ -36,43 +42,27 @@ class materiacontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   /*
+    {   
         $this->validate($request,[
-            'codigoM' => 'required|max:3',
-            'nombreM' => 'required|max:50'
-        ]);
-       */
-      /*
-             materia::create([
-            'codigoM' => $request->get('codigoM'),
-            'nombreM' => $request->get('nombreM'),
-            'grupoM' => $request->get('grupoM'),
-            
-        ]);
-
-        return redirect()->back();
-        //return Redirect::to('materia')->with('notice', 'El usuario ha sido creado correctamente.');
-        */
+            'codigoM' => 'required||max:3',
+            'nombreM' => 'required|max:50',
+            'grupoM' => 'required',
+        ],
+        [
+            'codigoM.max' => 'maximo 3 caracteres para el codigo'
+        ],
+    );
         
         $materia = new materia();
         $materia->codigoM = $request->input('codigoM');
         $materia->nombreM = $request->input('nombreM');
         $materia->grupoM = $request->input('grupoM');
         $materia->save();
-        return view('admin/page/registmatpage')->with('materia',$materia);
-    }
-    public function getmateria(Request $request, $id )
-    {
-        $materia = materia::find($id);
-        return $materia;
         
+        
+       return Redirect()->back()->with('mensaje','¡Genial! materia agregado con éxito');
     }
-     public function listarmateria()
-     {
-        $materias =  materia::all();
-        // return $materias;
-        return view('admin/page/ledmatpage')->with('materias',$materias);
-     }
+    
     /**
      * Display the specified resource.
      *
@@ -81,9 +71,7 @@ class materiacontroller extends Controller
      */
     public function show($id)
     {
-            $materias = materia::find($id);
-            return View('admin/page/registmatpage')->with('materias', $materias);
-         
+            
     }
 
     /**
@@ -94,7 +82,15 @@ class materiacontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        //$materia= materia::findOrFail($id);
+
+        //return view('admin.container.edit', compact('materia'));
+     
+        $where = array('id' => $id);
+        $data['mate_info'] = materia::where($where)->first();
+ 
+        return view('admin.container.edit', $data);
+        
     }
 
     /**
@@ -106,7 +102,25 @@ class materiacontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //$datosmateria = $request->all();
+       // materia::where('id','=',$id)->update($datosmateria);
+
+        $this->validate($request,[
+            'codigoM' => 'required||max:3',
+            'nombreM' => 'required|max:50',
+            'grupoM' => 'required',
+        ],
+        );
+         
+        $update = ['codigoM' => $request->codigoM, 'nombreM' => $request->nombreM,'grupoM' => $request->grupoM];
+        materia::where('id',$id)->update($update);
+   
+        //return Redirect()->back()
+        return Redirect('materia')
+       ->with('success','Genial! materia actualizada exitosamente');
+
+
+
     }
 
     /**
@@ -117,6 +131,9 @@ class materiacontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        materia::destroy($id);
+
+        return redirect('materia');
     }
+
 }

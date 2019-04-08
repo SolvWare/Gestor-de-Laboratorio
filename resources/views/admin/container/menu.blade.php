@@ -30,8 +30,8 @@
                 </div>
                 <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <ul class="list-group">
-                        <li class="list-group-item stylish-color"><a href="/registMat">Registar</a></li>
-                        <li class="list-group-item stylish-color"><a href="/ledMat">Listar Editar Deshabilitar</a></li>
+                        <li class="list-group-item stylish-color"><a href="/materia/create">Registar</a></li>
+                        <li class="list-group-item stylish-color"><a href="/materia">Listar Editar Deshabilitar</a></li>
                     </ul>
                 </div>
             </div>
