@@ -5,19 +5,19 @@
         </h4>
         <div class="d-flex justify-content-center pt-0">
         <div class="w-50">
-            <form action="{{ route('rol.store') }}" method="POST" class="text-center" style="color: #757575;">
+            <form action="{{ route('rol.update', $rol->id) }}" method="PUT" class="text-center" style="color: #757575;">
                 {{ csrf_field() }}
                 <div class="form-row">
                     <div class="col">
                         <div class="md-form mb-1">
                             <input type="text" id="materialRegisterFormCode" class="form-control" aria-describedby="materialRegisterFormCodeHelpBlock" name="codeR">
-                            <label for="materialRegisterFormCode">Codigo de Rol</label>
+                            <label for="materialRegisterFormCode">{{$rol->codeR}}</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="md-form mb-1">
                             <input type="text" id="materialRegisterFormName" class="form-control" aria-describedby="materialRegisterFormNameHelpBlock" name="nameR">
-                            <label for="materialRegisterFormName">Nombre de Rol</label>
+                            <label for="materialRegisterFormName">{{$rol->nameR}}</label>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                     <input type="checkbox" class="custom-control-input" id="customCheck6" name='prib6'>
                     <label class="custom-control-label" for="customCheck6">Pribilegio 6</label>
                 </div>
-                <button class="btn btn-primary my-4 waves-effect z-depth-0" type="submit" data-toggle="modal">Registrar</button>
+                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" data-toggle="modal">Registrar</button>
             </form>
         </div>
         </div>

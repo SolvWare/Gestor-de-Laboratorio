@@ -1,8 +1,8 @@
 <div class="">
     <div class="block_calendar_month  block z-depth-1" role="complementary" data-block="calendar_month" data-instanceid="3" aria-labelledby="instance-3-header" data-dockable="1">
             <div class="header text-center">
-                <div class="text-center blue p-1">
-                    <h2 id="instance-3-header">Calendario</h2>
+                <div class="text-center primary-color-dark p-1">
+                    <h4 id="instance-3-header">Calendario</h4>
                 </div>
             </div>
             <div class="p-2">
@@ -153,15 +153,15 @@
             </div>
         </div>
     <div class="pt-1 z-depth-1">
-        <div class="text-center p-1 blue">
-            <h2> Enlaces</h2>
+        <div class="text-center p-1 primary-color-dark">
+            <h4> Enlaces</h4>
         </div>
         <div class="">
             <ul>
-                <li><a href="http://www.fcyt.com">FCyT</a></li>
-                <li><a href="http://www.wweb-sis.com">Websis</a></li>
-                <li><a href="http://www.saga.com">Sagaa</a></li>
-                <li><a href="http://www.moodle.com">Moodle</a></li>
+                <li><a href="http://www.fcyt.umss.edu.bo/">FCyT</a></li>
+                <li><a href="http://websis.umss.edu.bo">Websis</a></li>
+                <li><a href="http://sagaa.fcyt.umss.edu.bo/">Sagaa</a></li>
+                <li><a href="http://enlinea.umss.edu.bo">EnLinea</a></li>
             </ul>
         </div>
     </div>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\materia;
+use App\Materia;
 
 class MateriaController extends Controller
 {
@@ -15,12 +15,9 @@ class MateriaController extends Controller
     public function index()
     {
 
-        $datos['materiass']=materia::orderBy('id', 'DESC')->paginate(3);
+        $datos['materiass']=Materia::orderBy('id', 'DESC')->paginate(3);
         return view('admin.page.ledmatpage',$datos );
-        //dd($request);
-       //$materias =  materia::all();
-        // return $materias;
-        //return view('admin/page/registmatpage');//->with('materias',$materias);
+
     }
 
     /**
@@ -30,9 +27,8 @@ class MateriaController extends Controller
      */
     public function create()
     {    
-        $regi=materia::all();
 
-        return view('admin.page.registmatpage',$regi->last());
+        return view('admin.page.registmatpage');
     }
 
     /**
@@ -53,7 +49,7 @@ class MateriaController extends Controller
         ],
     );
         
-        $materia = new materia();
+        $materia = new Materia();
         $materia->codigoM = $request->input('codigoM');
         $materia->nombreM = $request->input('nombreM');
         $materia->grupoM = $request->input('grupoM');
@@ -87,7 +83,7 @@ class MateriaController extends Controller
         //return view('admin.container.edit', compact('materia'));
      
         $where = array('id' => $id);
-        $data['mate_info'] = materia::where($where)->first();
+        $data['mate_info'] = Materia::where($where)->first();
  
         return view('admin.container.edit', $data);
         
@@ -113,9 +109,9 @@ class MateriaController extends Controller
         );
          
         $update = ['codigoM' => $request->codigoM, 'nombreM' => $request->nombreM,'grupoM' => $request->grupoM];
-        materia::where('id',$id)->update($update);
+        Materia::where('id',$id)->update($update);
    
-        //return Redirect()->back()
+
         return Redirect('materia')
        ->with('success','Genial! materia actualizada exitosamente');
 
@@ -131,9 +127,8 @@ class MateriaController extends Controller
      */
     public function destroy($id)
     {
-        materia::destroy($id);
+        Materia::destroy($id);
 
         return redirect('materia');
     }
-
 }

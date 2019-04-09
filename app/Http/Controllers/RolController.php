@@ -3,96 +3,55 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\rol;
+use App\Rol;
+
 class RolController extends Controller
 {
-     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $rol = rol::all();
-        return view('admin.page.rolpage',compact('rol'));
-
+    public function index(){
+        $rols = Rol::orderBy('id', 'DESC')->paginate();
+        return view('admin.page.ledrolpage', compact('rols'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('admin.page.rolpage');
+    public function create(){
+        return view('admin.page.registrolpage');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $this->validate($request,[
-          'name_rol'=>'required',
-        ]);
-        rol::create($request->all());
-        return redirect('rol')->with('success','rol created success');
+    public function edit($id){
+        $rol = Rol::find($id);
+        return view('admin.page.editrolpage', compact('rol'));
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id_rol)
-    {
-        $rol = rol::find($id_rol);
-		return view('admin.container.rolFile.show',compact('rol'));
+    public function update(Request $request, $id){
+        $rol = Rol::find($id);
+        $rol->codeR = $request->input('codeR');
+        $rol->nameR = $request->input('nameR');
+        $rol->prib1 = $request->input('prib1');
+        $rol->prib2 = $request->input('prib2');
+        $rol->prib3 = $request->input('prib3');
+        $rol->prib4 = $request->input('prib4');
+        $rol->prib5 = $request->input('prib5');
+        $rol->prib6 = $request->input('prib6');
+        $rol->save();
+        return redirect()->route('admin/page/registrolpage');
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id_rol)
-    {
-        $rol = rol::find($id_rol);
-        return view('admin.container.rolFile.edit',compact('rol'));
+    public function destroy($id){
+        $rol = Rol::find($id);
+        $rol->delete();
+        return back()->with('info', 'el rol fue eliminado');
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update($id_rol)
-    {
-        $rol= rol::where(['id_rol'=>$id_rol])->get();
-               rol::set(['enabled_rol'=>0])->get();
-
-        return redirect('rol')->with('success','rol deleted success');
+    
+    public function show($id){
+        $rol = Rol::find($id);
+        return view('admin/page/registrolpage');
     }
-	
-	/**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id_rol)
-    {
-        $rol= rol::where(['id_rol'=>$id_rol])->get();
-               rol::where(['id_rol'=>$id_rol])->delete();
-
-        return redirect('rol')->with('success','rol deleted success');
+    public function store(Request $request){
+        $rol = new Rol();
+        $rol->codeR = $request->input('codeR');
+        $rol->nameR = $request->input('nameR');
+        $rol->prib1 = $request->input('prib1');
+        $rol->prib2 = $request->input('prib2');
+        $rol->prib3 = $request->input('prib3');
+        $rol->prib4 = $request->input('prib4');
+        $rol->prib5 = $request->input('prib5');
+        $rol->prib6 = $request->input('prib6');
+        $rol->save();
+        return view('admin/page/registrolpage');
     }
 }

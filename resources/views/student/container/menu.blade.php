@@ -6,8 +6,8 @@
         <nav class="nav nav-pills flex-column">
             <a class="nav-link text-dark" href="#item-1">Materias</a>
             <a class="nav-link text-dark" href="#item-2">Horarios</a>
-            <a class="nav-link text-dark" href="#item-3">Estudiantes</a>
-            <a class="nav-link text-dark" href="#item-4">Reportes</a>
+            <a class="nav-link text-dark" href="#item-3">Reportes</a>
+            <a class="nav-link text-dark" href="#item-4">Portafolio</a>
         </nav>
     </div>
 </div>

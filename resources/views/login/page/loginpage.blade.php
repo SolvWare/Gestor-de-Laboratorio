@@ -14,13 +14,13 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
 </head>
-<body class="h-100">
+<body class="h-100 body">
     <header class="h-25">
         @include('inicio.nav')
     </header>
     <section class="d-flex text-white h-75 mt-1">
         <div class="w-25 d-inline-block">
-            @include('login.container.menu')
+            @include('inicio.menu')
         </div>
         <div class="w-100 d-inline-block mr-1 ml-1">
             @include('login.container.login')

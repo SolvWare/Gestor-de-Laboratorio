@@ -14,7 +14,7 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
 </head>
-<body class="h-100">
+<body class="h-100 body">
     <header class="h-25">
         @include('inicio.nav')
     </header>
@@ -45,4 +45,3 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"></script>
 </body>
 </html>
-
