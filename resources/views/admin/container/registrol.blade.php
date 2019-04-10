@@ -21,29 +21,35 @@
                         </div>
                     </div>
                 </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1" name='prib1'>
-                    <label class="custom-control-label" for="customCheck1">Pribilegio 1</label>
+                <div class="form-row ">
+                    <div class="custom-control custom-checkbox col-7">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" name='prib1'>
+                        <label class="custom-control-label" for="customCheck1">Portafolio</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2" name='prib2'>
+                        <label class="custom-control-label" for="customCheck2">Estudiantes</label>
+                    </div>
+                </div>  
+                <div class="form-row"> 
+                    <div class="custom-control custom-checkbox col-7">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3" name='prib3'>
+                        <label class="custom-control-label" for="customCheck3">Docentes</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4" name='prib4'>
+                        <label class="custom-control-label" for="customCheck4">Auxiliares</label>
+                    </div>
                 </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck2" name='prib2'>
-                    <label class="custom-control-label" for="customCheck2">Pribilegio 2</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck3" name='prib3'>
-                    <label class="custom-control-label" for="customCheck3">Pribilegio 3</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck4" name='prib4'>
-                    <label class="custom-control-label" for="customCheck4">Pribilegio 4</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck5" name='prib5'>
-                    <label class="custom-control-label" for="customCheck5">Pribilegio 5</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck6" name='prib6'>
-                    <label class="custom-control-label" for="customCheck6">Pribilegio 6</label>
+                <div class="form-row">
+                    <div class="custom-control custom-checkbox col-6" style="margin-left:14px;">
+                        <input type="checkbox" class="custom-control-input" id="customCheck5" name='prib5' >
+                        <label class="custom-control-label" for="customCheck5">Roles</label>
+                    </div>
+                    <div class="custom-control custom-checkbox"  style="margin-left:40px;">
+                        <input type="checkbox" class="custom-control-input" id="customCheck6" name='prib6'>
+                        <label class="custom-control-label" for="customCheck6">Materias</label>
+                    </div>
                 </div>
                 <button class="btn btn-primary my-4 waves-effect z-depth-0" type="submit" data-toggle="modal">Registrar</button>
             </form>

@@ -6,7 +6,7 @@
         <div class="d-flex justify-content-center pt-0">
             <div class="w-100">
                 <div class="mt-1">
-                    <table class="table">
+                    <table class="table table-hover table-sm">
                         <thead class="thead-dark">
                             <tr>
                                 <th>Id</th>

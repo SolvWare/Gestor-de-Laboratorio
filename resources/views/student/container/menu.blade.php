@@ -1,13 +1,11 @@
-<div class="z-depth-1">
-    <div class="text-center primary-color-dark p-1">
-        <h4>Menú principal</h4>
-    </div>
+<div class="z-depth-1 bg-white ">
+    
     <div>
         <nav class="nav nav-pills flex-column">
-            <a class="nav-link text-dark" href="#item-1">Materias</a>
-            <a class="nav-link text-dark" href="#item-2">Horarios</a>
-            <a class="nav-link text-dark" href="#item-3">Reportes</a>
-            <a class="nav-link text-dark" href="#item-4">Portafolio</a>
+            <a class="nav-link " href="#item-1">Mis Materias</a>
+            <a class="nav-link " href="#item-2">Mis Horarios</a>
+            <a class="nav-link " href="#item-3">Mis Reportes</a>
+            <a class="nav-link " href="#item-4">Mi Portafolio</a>
         </nav>
     </div>
 </div>

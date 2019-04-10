@@ -1,11 +1,11 @@
-<div class="">
+<div class="bg-white ">
     <div class="block_calendar_month  block z-depth-1" role="complementary" data-block="calendar_month" data-instanceid="3" aria-labelledby="instance-3-header" data-dockable="1">
-            <div class="header text-center">
-                <div class="text-center primary-color-dark p-1">
+            <div class="header text-center text-dark p-2">
+                
                     <h4 id="instance-3-header">Calendario</h4>
-                </div>
+                
             </div>
-            <div class="p-2">
+            <div class="" style="margin-left:60px">
                 <div id="calendar-month-2019-March-5c97fc6b754745c97fc6b6f7c73" data-template="core_calendar/month_mini" data-includenavigation="false" data-mini="true">
                     <div class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="3" data-year="2019" data-view="month">
                         <table class="minicalendar calendartable">
@@ -152,10 +152,8 @@
                 </div>
             </div>
         </div>
-    <div class="pt-1 z-depth-1">
-        <div class="text-center p-1 primary-color-dark">
-            <h4> Enlaces</h4>
-        </div>
+    <div class="pt-1 z-depth-1 pt-4 pb-3">
+       
         <div class="">
             <ul>
                 <li><a href="http://www.fcyt.umss.edu.bo/">FCyT</a></li>

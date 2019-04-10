@@ -12,10 +12,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
+    <!-- Material css -->
+    <link href="{{ asset('css/background.css') }}" rel="stylesheet">
 </head>
 <body class="h-100 body">
     <header class="h-25">
         @include('inicio.nav')
+        <!-- <nav aria-label="breadcrumb" class="pt-1" style="width:175px;">
+            <ol class="breadcrumb h-auto primary-color-dark" style="margin-left:10px;">
+                <li class="breadcrumb-item active" aria-current="page"><a href="/" class=" text-white">Home</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Docentes</li>
+            </ol>
+        </nav> -->
     </header>
     <section class="d-flex text-white h-75 mt-1">
         <div class="w-25 d-inline-block">

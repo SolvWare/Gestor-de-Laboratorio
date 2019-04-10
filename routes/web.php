@@ -51,7 +51,7 @@ Route::get('importUsr', function () {
 Route::get('registUsr', function () {
     return view('admin/page/registpage');
 });
-Route::get('search', function () {
+Route::get('usuario', function () {
     return view('admin/page/searchpage');
 });
 /*Auxiliar*/

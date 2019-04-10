@@ -9,7 +9,7 @@
             </div>
             <div class="text-dark p-2">
                 <p>
-                    Bienbenido  Estudiante tienes control de la siguientes funciones en la plataforma. 
+                    Bienvenido  Estudiante tienes control de la siguientes funciones en la plataforma. 
                     <ul>
                         <li>Ver las materia en la que esta inscrito</li>
                         <li>Ver los horarios de sus materias</li>

@@ -1,5 +1,5 @@
-<footer  class="blockquote-footer font-small black ">
+<footer  class="font-small black footer" style="margin-">
     <div class="footer-copyright text-center text-light py-3">© 2019 Copyright:
-        <a class=" text-light" href="https://mdbootstrap.com/education/bootstrap/"> SOLVWARE</a>
+        <a class=" text-light" href=""> SOLVWARE</a>
     </div>
 </footer>

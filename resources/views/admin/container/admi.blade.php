@@ -9,7 +9,7 @@
             </div>
             <div class="text-dark p-2">
                 <p>
-                    Bienbenido  Administrador tienes control total de la plataforma. 
+                    Bienvenido  Administrador tienes control total de la plataforma. 
                     <ul>
                         <li>Importar Usuarios, Roles, Materias</li>
                         <li>Registrar Usuarios, Roles, Materias</li>

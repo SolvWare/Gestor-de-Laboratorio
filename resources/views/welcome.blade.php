@@ -12,9 +12,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
+    <!-- Material css -->
+    <link href="{{ asset('css/background.css') }}" rel="stylesheet">
 </head>
 <body class="h-100 body">
-    <header class="h-25">
+    <header class="h-25 ">
         @include('inicio.nav')
     </header>
     <section class="d-flex text-white h-75 mt-1">
@@ -29,6 +31,8 @@
         </div>
     </section>
     <footer class="">
+        
+        @include('inicio.navegacion')
         @include('inicio.footer')
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
