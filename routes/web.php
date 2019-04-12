@@ -72,5 +72,5 @@ Route::get('student', function () {
 Route::resource('rol', 'RolController');
 Route::resource('materia', 'MateriaController');
 Route::resource('usuario', 'UsuarioController');
-
+Route::resource('importUsr', 'ImportController');
 /*Route::get('/search','UsuarioController@search');*/

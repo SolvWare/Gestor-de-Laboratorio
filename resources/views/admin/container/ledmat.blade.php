@@ -6,6 +6,21 @@
         <div class="d-flex justify-content-center pt-0">
             <div class="w-100">
                 <div class="mt-1">
+                   @if ($message = Session::get('success'))
+                        <div class="alert alert-success">
+                            <p>{{ $message }}</p>
+                        </div>
+                    @endif
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <strong>Opps!</strong> Something went wrong<br><br>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
                     <table class="table table-hover table-sm">
                         <thead class="thead-dark">
                             <tr>
@@ -18,48 +33,28 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($materias as $materia)
+                            @foreach ($materiass as $materiaa)
                                 <tr class="table-active">
-                                    <th>{{$materia->id}}</th>
-                                    <th>{{$materia->codeM}}</th>
-                                    <th>{{$materia->nameM}}</th>
-                                    <th>{{$materia->numGM}}</th>
-                                    <th><a href="/registMat"><i class="fas fa-edit fa-lg"></a></th>
-                                    <th>
-                                        <form action="{{ route('materia.destroy', $materia->id) }}" method="POST">
+                                    <th>{{$materiaa->id}}</th>
+                                    <th>{{$materiaa->codigoM}}</th>
+                                    <th>{{$materiaa->nombreM}}</th>
+                                    <th>{{$materiaa->grupoM}}</th>
+                                    <th><a href="{{ url('/materia/'.$materiaa->id.'/edit')}}"><i class="fas fa-edit fa-lg"></a></th>
+                                   <th>
+
+                                   <form action="{{ url('/materia/'.$materiaa->id) }}" method="POST">
                                             {{ csrf_field() }}
                                             <input type="hidden" name="_method" value="DELETE">
                                             <button class="btn btn-link"><i class="fas fa-check-square fa-lg"></i></button>
                                         </form>
-                                    </th>
+                                   </th>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
-                    {{!! $materias->render() !!}}
                 </div>
             </div>
         </div>
     </div>
 </div>
     
-<!-- Modal -->
-<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal1Label" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header blue">
-            <h5 class="modal-title" id="exampleModal1Label">Desea deshabilitar esta Materia</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body bg-info">
-            La Materia permanecera en la base de datos
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-primary">Aceptar</button>
-        </div>
-        </div>
-    </div>
-</div>

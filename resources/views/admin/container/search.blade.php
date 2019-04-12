@@ -25,6 +25,8 @@
               <th>Nombre</th>
               <th>Apellido</th>
               <th>Rol</th>
+              <th>materia</th>
+              <th>grupo</th>
               <th>Editar</th>
               <th>Deshabilitar</th>
             </tr>
@@ -38,9 +40,11 @@
                 <td>{{$usuario->nameUsr}}</td>
                 <td>{{$usuario->lastUsr}}</td>
                 <td>{{$usuario->rol}}</td>
+                <td>{{$usuario->materia}}</td>
+               <td>{{$usuario->grupo}}</td>
                 <th class="text-center"><a href="/registUsr" ><i class="fas fa-edit fa-lg "></i></a></th>
                 <th  class="text-center">
-                  <form action="{{ route('usuario.destroy', $usuario->id) }}" method="POST">
+                  <form action="{{ url('usuario', $usuario->id) }}" method="POST">
                       {{ csrf_field() }}
                       <input type="hidden" name="_method" value="DELETE">
                       <button class=" invisible"><i class="fas fa-check-square fa-lg visible text-center" ></i></button>
@@ -50,7 +54,6 @@
             @endforeach
           </tbody>
         </table>
-        {{!! $usuarios->render() !!}}
       </div>
     </div>
   </div>
