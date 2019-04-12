@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +29,9 @@ Route::resource('materia','MateriaController');
 Route::get('viewLab', function () {
     return view('labpage');
 });
-Route::get('login', function () {
-    return view('login/page/loginpage');
-});
+//Route::get('login', function () {
+  //  return view('auth/page/loginpage');
+//});
 /*Administrador*/
 Route::get('admi', function () {
     return view('admin/page/admipage');
@@ -76,5 +77,27 @@ Route::get('student', function () {
 Route::resource('rol', 'RolController');
 //Route::resource('materia', 'MateriaController');
 Route::resource('usuario', 'UsuarioController');
+Route::resource('importUsr', 'ImportController');
+//Auth::routes();
 
-/*Route::get('/search','UsuarioController@search');*/
+// Route::get('logi','Auth\LoginController@showLoginForm');
+// // Route::get('/logi', function(){
+// //  return view('auth.page.loginpage');
+// // });
+// Route::post('/logi', 'Auth\LoginController@logi');
+// Route::get('admin','AdminController@index')->name('admin');
+// Route::get('logout','AdminController@logout')->name('logout');
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
+// /*Llamadas al controlador Auth*/
+// Route::get('login', 'AuthController@showLogin'); // Mostrar login
+// Route::post('login', 'AuthController@postLogin'); // Verificar datos
+// Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
+ 
+// /*Rutas privadas solo para usuarios autenticados*/
+// Route::group(['before' => 'auth'], function()
+// {
+//     Route::get('admin', 'HomeController@index'); // Vista de inicio
+// });
+Route::resource('login', 'AdminController');

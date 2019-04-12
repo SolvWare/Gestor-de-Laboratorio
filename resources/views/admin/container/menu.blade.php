@@ -47,7 +47,7 @@
                     <ul class="list-group">
                         <li class="list-group-item "><a href="/importUsr">Importar</a></li>
                         <li class="list-group-item "><a href="/registUsr">Registrar</a></li>
-                        <li class="list-group-item "><a href="/search">Buscar</a></li>
+                        <li class="list-group-item "><a href="/usuario">Buscar</a></li>
                     </ul>
                 </div>
             </div>

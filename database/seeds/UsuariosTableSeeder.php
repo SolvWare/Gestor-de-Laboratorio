@@ -12,6 +12,13 @@ class UsuariosTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Usuario::class, 20)->create();
+        //factory(Usuario::class, 20)->create();
+        Usuario::create([
+            'codSis' => '201965448',
+            'ciUsr'  => Hash::make('secret'),
+            'nameUsr'   => 'pablo',
+            'lastUsr'      => 'chaves',
+            'rol'   =>  'admin'
+        ]);
     }
 }

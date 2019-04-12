@@ -27,32 +27,28 @@
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Rol</th>
+            <th>Materia</th>
+            <th>Grupo</th>
             <th>Editar</th>
             <th>Deshabilitar</th>
           </tr>
         </thead>
         <tbody id="tabla1">
-          @foreach($usuarios as $usuario)
-            <tr data-id="{{$usuario->id}}">
-              <td >{{$usuario->id}}</td>
-              <td>{{$usuario->codSis}}</td>
-              <td>{{$usuario->ciUsr}}</td>
-              <td>{{$usuario->nameUsr}}</td>
-              <td>{{$usuario->lastUsr}}</td>
-              <td>{{$usuario->rol}}</td>
-              <th><a href="/registUsr"><i class="fas fa-edit fa-lg"></i></a></th>
-              <th>
-                <form action="{{ route('usuario.destroy', $usuario->id) }}" method="POST">
-                    {{ csrf_field() }}
-                    <input type="hidden" name="_method" value="DELETE">
-                    <button class="btn btn-link"><i class="fas fa-check-square fa-lg"></i></button>
-                </form>
-              </th>
+        @foreach($usuarios as $usuario)
+            <tr>
+            <td>{{$usuario->id}}</td>
+            <td>{{$usuario->codSis}}</td>
+            <td>{{$usuario->ciUsr}}</td>
+            <td>{{$usuario->nameUsr}}</td>
+            <td>{{$usuario->lastUsr}}</td>
+            <td>{{$usuario->rol}}</td>
+            <td>{{$usuario->materia}}</td>
+            <td>{{$usuario->grupo}}</td>
             </tr>
-          @endforeach
+@endforeach
         </tbody>
       </table>
-      {{!! $usuarios->render() !!}}
+      
     </div>
   </div>
 </div>

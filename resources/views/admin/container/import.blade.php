@@ -9,21 +9,21 @@
             <a><i class="fas fa-file-csv "></i>
           </div>
           <div class="custom-file">
-              <input type="file" accept=".csv" class="custom-file-input" id="customFile">
+              <input type="file" class="custom-file-input" id="customFile">
               <label class="custom-file-label" for="customFile">Escoger Archivo</label>
-          </div>
-          <div class="d-flex justify-content-center">
-            <div class=" p-2">
-                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-                  Cargar Archivo 
-                </button>
-            </div>
+              
+              <form action="{{ url('importUsr') }}" method="POST" enctype="multipart/form-data">
+                  {{ csrf_field() }}
+                  Choose your xls/csv File : <input type="file" name="file" class="form-control">
+
+                  <input type="submit" class="btn btn-primary btn-lg" style="margin-top: 3%">
+              </form>
           </div>
         </div>
       </div>
     </div>
 </div>
-
+<!-- 
 <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal1Label" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -45,4 +45,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

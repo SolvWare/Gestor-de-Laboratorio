@@ -23,7 +23,7 @@
             @include('inicio.menu')
         </div>
         <div class="w-100 d-inline-block mr-1 ml-1">
-            @include('login.container.login')
+            @include('auth.container.login')
         </div>
         <div class="w-25 d-inline-block">
             @include('inicio.link')

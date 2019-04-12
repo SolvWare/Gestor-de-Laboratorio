@@ -10,4 +10,12 @@ class Usuario extends Model
     protected $fillable = [
         'codSis','ciUsr','nameUsr','lastUsr','rol', 'materia', 'grupo',
     ];
+/**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 }

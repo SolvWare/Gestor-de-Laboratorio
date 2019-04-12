@@ -109,6 +109,18 @@ return [
         'grupoM' => [
             'required' => 'El campo grupo es obligatorio',
         ],
+        'codSis' => [
+            'required' => 'El campo codSis es obligatorio',
+        ],
+        'ciUsr' => [
+            'required' => 'El campo ci es obligatorio',
+        ],
+        'nameUsr' => [
+            'required' => 'El campo nombre es obligatorio',
+        ],
+        'lastUsr' => [
+            'required' => 'El campo apellido es obligatorio',
+        ],
     ],
 
     /*

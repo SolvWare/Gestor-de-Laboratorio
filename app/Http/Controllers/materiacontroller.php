@@ -46,7 +46,7 @@ class MateriaController extends Controller
         ],
         [
             'codigoM.max' => 'maximo 3 caracteres para el codigo'
-        ],
+        ]
     );
         
         $materia = new Materia();
@@ -85,7 +85,7 @@ class MateriaController extends Controller
         $where = array('id' => $id);
         $data['mate_info'] = Materia::where($where)->first();
  
-        return view('admin.container.edit', $data);
+        return view('admin.container.editmat', $data);
         
     }
 
@@ -105,7 +105,7 @@ class MateriaController extends Controller
             'codigoM' => 'required||max:3',
             'nombreM' => 'required|max:50',
             'grupoM' => 'required',
-        ],
+        ]
         );
          
         $update = ['codigoM' => $request->codigoM, 'nombreM' => $request->nombreM,'grupoM' => $request->grupoM];

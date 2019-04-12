@@ -28,6 +28,11 @@
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <a class="text-light text-center my-2 my-sm-0"  href="/login"><i class="fas fa-user-circle " style="font-size:30px;" ></i>
+            <a href="/logout"
+            onclick="event.preventDefault();
+             document.getElementById('logout-form').submit();">
+              Logout
+            </a>
           </a>
           </form>
         </div>

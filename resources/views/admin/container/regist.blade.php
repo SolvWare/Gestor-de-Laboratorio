@@ -5,7 +5,21 @@
     </h4>
     <div class="d-flex justify-content-center pt-0">
       <div class="w-50">
-        <form action="{{ route('usuario.store') }}" method="POST" class="text-center" style="color: #757575;">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    @if(session('mensaje'))
+                        <div class="alert alert-success">
+                            <p>{{ session('mensaje') }}</p>
+                        </div>
+                    @endif
+        <form action="{{ url('usuario') }}" method="POST" class="text-center" style="color: #757575;">
           {{ csrf_field() }}
           <div class="form-row">
             <div class="col">

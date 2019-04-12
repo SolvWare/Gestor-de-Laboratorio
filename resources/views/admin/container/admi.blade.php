@@ -1,6 +1,7 @@
 <div class="" >
     <div class="text-center primary-color-dark p-1">
-        <h4>Bienvenido Administrador</h4>
+        <h4>Bienvenido Administrador usuario root</h4>
+        <h2></h2>
     </div>
     <div class="">
         <div class="card">
