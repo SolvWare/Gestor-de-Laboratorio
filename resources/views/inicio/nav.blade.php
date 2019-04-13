@@ -1,31 +1,41 @@
-<div class="bg-info">
-    <div class="nav justify-content-center h-75  text-light">
-        <h1 class="align-self-center">Sesiones de Laboratorios</h1>
-    </div>
-    <nav class="navbar navbar-expand-sm h-25 text-light" >
-        <a class="nav-link  rounded btn-outline-light" href="#">Ing. Sistemas</a>
-        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color-dark">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/UMSS.png" width="35" height="35" class="img-fluid" alt="Responsive image">
+        <a class="navbar-brand" href="/"><h2><strong>Sesiones de Laboratorios</strong></h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link rounded btn-outline-light" href="#" style="color:white;">Docentes <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/listadoD">Docentes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link rounded btn-outline-light" href="#" style="color:white;">Materias</a>
+                    <a class="nav-link" href="/listadoM">Materias</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link rounded btn-outline-light" href="#" style="color:white;">Laboratorios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link rounded btn-outline-light" href="#" style="color:white;">Enlaces</a>
+                    <a class="nav-link" href="/listadoL">Laboratorios</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-outline-light text-white my-2 my-sm-0" type="submit">Login</button>
+                <a class="text-light text-center my-2 my-sm-0"  href="/login"><i class="fas fa-user-circle " style="font-size:30px;" ></i></a>
             </form>
         </div>
     </nav>
-</div>
+
+    <div class="view intro-2">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <div class="container text-center white-text">
+                    <div class="white-text text-center wow fadeInUp">
+                        <h2>This Navbar is fixed</h2>
+                        <h5>It will always stay visible on the top, even when you scroll down</h5>
+                        <br>
+                        <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>    

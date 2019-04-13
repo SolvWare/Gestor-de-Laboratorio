@@ -12,10 +12,35 @@
 */
 
 Route::get('/', function () {
-    // return 'hola mundo';
-   return view('welcome');
+    return view('welcome');
+});
+Route::get('viewDoc', function () {
+    return view('docentes');
+});
+Route::get('viewMat', function () {
+    return view('materias');
+});
+Route::get('viewLab', function () {
+    return view('laboratorios');
+});
+Route::get('login', function () {
+    return view('login.login');
+});
+Route::get('admi', function () {
+    return view('administrador.pagina.inicio');
 });
 
+Route::resource('rol', 'RolController');
 
-Route:: get('/materia', 'materiacontroller@create');
-Route::post('/materia', 'materiacontroller@store');
+Route::resource('materia', 'MateriaController');
+Route::get('listadoM','MateriaController@listado');
+
+Route::resource('usuario', 'UsuarioController');
+Route::get('listadoD','UsuarioController@listado');
+//Route::post('/desabilitar/{usuario}','UsuarioController@deshabilitar');
+Route::get('/importUsr','ImportController@index');
+Route::post('/importUsr', 'ImportController@import');
+
+Route::resource('laboratorio', 'LaboratorioController');
+Route::get('listadoL','LaboratorioController@listado');
+
