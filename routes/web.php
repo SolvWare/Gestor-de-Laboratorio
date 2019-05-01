@@ -57,3 +57,12 @@ Route::get('docente', function () {
 Route::get('estudiante', function () {
     return view('estudiante.pagina.studentpage');
 });
+
+//lista de control de practicas
+Route::get('auxiliar/control', function () {
+    return view('auxiliar.pagina.ControlPracticas.ListaControles');
+});
+
+Route::get('auxiliar/control/practica', function () {
+    return view('auxiliar.pagina.ControlPracticas.Practicas');
+});

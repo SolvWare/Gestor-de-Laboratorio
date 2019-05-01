@@ -4,7 +4,7 @@
                 <div class="">
                     <div class="card-header" role="tab" id="headingOne">
                         <h6 class="mb-0">
-                            <a class="nav text-dark" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <a class="nav text-dark" href="">
                                 <strong>Materias</strong>
                             </a>
                         </h6>
@@ -13,7 +13,7 @@
                 <div class="">
                     <div class="card-header" role="tab" id="headingTwo">
                         <h6 class="mb-0">
-                            <a class="nav text-dark" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <a class="nav text-dark" href="">
                                 <strong>Horarios</strong>
                             </a>
                         </h6>
@@ -22,7 +22,7 @@
                 <div class="">
                     <div class="card-header" role="tab" id="headingThree">
                         <h6 class="mb-0">
-                            <a class="nav text-dark" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                            <a class="nav text-dark" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                 <strong>Portafolio</strong>
                             </a>
                         </h6>
