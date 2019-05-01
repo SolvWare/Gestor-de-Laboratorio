@@ -1,42 +1,41 @@
-<div class="primary-color-dark">
-  <div class="row">
-    <div class="pt-1 pl-3">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/UMSS.png" width="60" height="60" class="img-fluid" alt="Responsive image">
-        <a class="brand" style="color:white" >UMSS</a>                
-    </div>
-  
-    <div class="pt-4 pl-5 col-9">
-        <h1 class=" text-center" style="color:white; margin-left:0%">Sesiones de Laboratorios</h1>
-    </div>
-    </div>
-    <nav class=" navbar-expand-lg navbar-light" >
-        <!-- <a class="text-light" href="/"><i class="fas fa-home" style="height:4px;"></i>Home</a>
-        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-          <div class=" " style="margin-left:16%;">
-              <ul class="navbar-nav mr-auto ">
-              <li class="nav-item">
-                  <a class=" text-light text-center" style=" width: 120px;"  href="/">Home <span class="sr-only">(current)</span></a>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color-dark">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/UMSS.png" width="35" height="35" class="img-fluid" alt="Responsive image">
+        <a class="navbar-brand" href="/"><h2><strong>Sesiones de Laboratorios</strong></h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/listadoD">Docentes</a>
                 </li>
                 <li class="nav-item">
-                  <a class=" text-light text-center" style=" width: 120px;"  href="/viewDoc">Docentes <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/listadoM">Materias</a>
                 </li>
                 <li class="nav-item">
-                  <a class="text-light text-center" style=" width: 120px;" href="/viewMat">Materias</a>
+                    <a class="nav-link" href="/listadoL">Laboratorios</a>
                 </li>
-                <li class="nav-item">
-                  <a class="text-light text-center"  style="width: 120px;" href="/viewLab">Laboratorios</a>
-                </li>
-              </ul>
-          </div>
-          <form class="form-inline my-2 my-lg-0 " style="margin-left:56%;">
-            <a class="text-light text-center my-2 my-sm-0"  href="/login"><i class="fas fa-user-circle " style="font-size:40px;" ></i>
-          </a>
-          </form>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a class="text-light text-center my-2 my-sm-0"  href="/login"><i class="fas fa-user-circle " style="font-size:30px;" ></i></a>
+            </form>
         </div>
-      </nav>
-      
-</div>
+    </nav>
+
+    <div class="view intro-2">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <div class="container text-center white-text">
+                    <div class="white-text text-center wow fadeInUp">
+                        <h2>This Navbar is fixed</h2>
+                        <h5>It will always stay visible on the top, even when you scroll down</h5>
+                        <br>
+                        <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>    
