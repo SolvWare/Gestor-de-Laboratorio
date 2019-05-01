@@ -4,7 +4,7 @@
             <div class="">
                 <div class="card-header" role="tab" id="headingOne">
                     <h6 class="mb-0">
-                        <a class="collapsed text-dark" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <a class="nav text-dark" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <strong>Roles</strong>
                         </a>
                     </h6>
@@ -20,7 +20,7 @@
             <div class="">
                 <div class="card-header" role="tab" id="headingTwo">
                     <h6 class="mb-0">
-                        <a class="collapsed text-dark" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <a class="nav text-dark" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             <strong>Materias</strong>
                         </a>
                     </h6>
@@ -35,7 +35,7 @@
             <div class="">
                 <div class="card-header" role="tab" id="headingThree">
                     <h6 class="mb-0">
-                        <a class="collapsed text-dark" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                        <a class="nav text-dark" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
                             <strong>Laboratorios</strong>
                         </a>
                     </h6>
@@ -51,16 +51,16 @@
             <div class="">
                 <div class="card-header" role="tab" id="headingFour">
                     <h6 class="mb-0">
-                        <a class="collapsed text-dark" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                        <a class="nav text-dark" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                             <strong>Usuarios</strong>
                         </a>
                     </h6>
                 </div>
                 <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
                     <ul class="list-group">
-                        <li class="list-group-item"><a class="text-dark" class="text-dark" href="/importUsr">Importar</a></li>
-                        <li class="list-group-item"><a class="text-dark" class="text-dark" href="/usuario/create">Registrar</a></li>
-                        <li class="list-group-item"><a class="text-dark" class="text-dark" href="/usuario">Lista y Busqueda</a></li>
+                        <li class="list-group-item"><a class="text-dark" href="/importUsr">Importar</a></li>
+                        <li class="list-group-item"><a class="text-dark" href="/usuario/create">Registrar</a></li>
+                        <li class="list-group-item"><a class="text-dark" href="/usuario">Lista y Busqueda</a></li>
                     </ul>
                 </div>
             </div>

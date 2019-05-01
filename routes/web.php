@@ -44,3 +44,16 @@ Route::post('/importUsr', 'ImportController@import');
 Route::resource('laboratorio', 'LaboratorioController');
 Route::get('listadoL','LaboratorioController@listado');
 
+
+
+Route::get('auxiliar', function () {
+    return view('auxiliar.pagina.auxpage');
+});
+
+Route::get('docente', function () {
+    return view('docente.pagina.docentpage');
+});
+
+Route::get('estudiante', function () {
+    return view('estudiante.pagina.studentpage');
+});
