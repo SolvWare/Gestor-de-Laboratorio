@@ -3,27 +3,36 @@
             <h5 class="card-header text-center primary-color-dark p-2">
             Lista de Controles de Practica
             </h5>
-            <div class="form-row">
-                <div class="row">
-                    <div class="pl-5 p-4 " >
-                    <h6 class="text-dark">Materias</h6>
-                    <select class="form-control" id="grupo" name="grupo">
-                        <option value="Intro">Intro</option>
-                        <option value="Elementos">Elementos</option>
-                    </select>
+
+            <div class="card-body d-flex justify-content-between align-items-center">
+           
+                <div class="form-row" style="margin-left:10%;">
+                    <div class="row">
+                        <div class="pl-5 " >
+                        <h6 class="text-dark">Materias</h6>
+                        <select class="form-control" id="grupo" name="grupo">
+                            <option value="Intro">Intro</option>
+                            <option value="Elementos">Elementos</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="pl-5 " >
+                        <h6 class="text-dark">Grupo</h6>
+                        <select class="form-control" id="grupo" name="grupo">
+                            <option value="grupo1">grupo 1</option>
+                            <option value="grupo2">grupo 2</option>
+                            <option value="grupo3">grupo 3</option>
+                        </select>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="pl-5 p-4 " >
-                    <h6 class="text-dark">Grupo</h6>
-                    <select class="form-control" id="grupo" name="grupo">
-                        <option value="grupo1">grupo 1</option>
-                        <option value="grupo2">grupo 2</option>
-                        <option value="grupo3">grupo 3</option>
-                    </select>
-                    </div>
-                </div>
+            <button class="btn btn-primary waves-effect"  style="margin-right:13%;" type="submit" data-toggle="modal">
+                <a href="/auxiliar/control/practica" class="text-white">Nueva Practica</a>
+            </button>
+           
             </div>
+
             <div class="d-flex justify-content-center pt-0" style="position: relative; height: 545px; margin-top: .5rem; overflow: auto;">
                 <div class="w-75">
                     <div class="pl-1 pr-2 p-3 ">

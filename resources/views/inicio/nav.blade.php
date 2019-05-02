@@ -18,7 +18,7 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <a class="text-light text-center my-2 my-sm-0"  href="/login"><i class="fas fa-user-circle " style="font-size:30px;" ></i></a>
+                <a class="text-light text-center my-2 my-sm-0"  href="/login"><i class="fas fa-user-circle " style="font-size:40px;" ></i></a>
             </form>
         </div>
     </nav>

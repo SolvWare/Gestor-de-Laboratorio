@@ -20,7 +20,7 @@
     </header>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-0 m-0 pl-5">
-            <li class="breadcrumb-item"><a class="black-text" href="/admi">Administrador</a></li>
+            <li class="breadcrumb-item"><a class="black-text" href="/admi">Home</a></li>
             <li class="breadcrumb-item"><a class="black-text" href="/importUsr">Usuario</a></li>
             <li class="breadcrumb-item active">Importar</li>
         </ol>

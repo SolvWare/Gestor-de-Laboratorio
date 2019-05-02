@@ -40,7 +40,7 @@
                 <div class="">
                     <div class="card-header" role="tab" id="headingFive">
                         <h6 class="mb-0">
-                            <a class="nav text-dark" href="">
+                            <a class="nav text-dark" href="/auxiliar/control">
                                 <strong>Control de Practicas</strong>
                             </a>
                         </h6>

@@ -3,6 +3,13 @@
             <h5 class="card-header text-center primary-color-dark p-2">
               Control de Practica
             </h5>
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <h5 class="text-dark pt-3" style="margin-left:17%;"><strong>Lista para tomar asistenta y controlar practicas</strong> </h5>
+                <div class="pt-2" style="margin-right:14%;">
+                    <button class="btn btn-primary waves-effect"  type="submit" data-toggle="modal">Guardar</button>
+                </div>
+            </div>
+            
     <div class="d-flex justify-content-center pt-0" style="position: relative; height: 545px; margin-top: .5rem; overflow: auto;">
         <div class="w-75">
             <div class="pl-1 pr-2 p-3 ">
