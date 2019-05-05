@@ -9,7 +9,7 @@ class Horario extends Model
     protected $table = "horario";
 
     protected $fillable = [
-        'horaInicio', 'horaFin', 'id_lab', 'id_mat',
+        'dia', 'horaInicio', 'horaFin', 'lab_id', 'mat_id',
     ];
 
     public function laboratorio()

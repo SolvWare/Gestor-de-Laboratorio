@@ -16,9 +16,9 @@ class AddSesionTable extends Migration
         Schema::create('sesion', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('numSesion');
-            $table->integer('cod_sis')->unsigned();
+            $table->integer('user_id')->unsigned();
 
-            $table->foreign('cod_sis')->references('codsis')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             
             $table->timestamps();
         });

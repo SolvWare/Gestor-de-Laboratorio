@@ -16,9 +16,9 @@ class AddGruposTable extends Migration
         Schema::create('grupos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('numGrupo');
-            $table->integer('cod_mat')->unsigned();
+            $table->integer('mat_id')->unsigned();
 
-            $table->foreign('cod_mat')->references('codMat')->on('materia')->onDelete('cascade');
+            $table->foreign('mat_id')->references('id')->on('materia')->onDelete('cascade');
 
             $table->timestamps();
         });

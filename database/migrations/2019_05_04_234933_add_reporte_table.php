@@ -17,9 +17,9 @@ class AddReporteTable extends Migration
             $table->increments('id');
             $table->integer('numReporte');
             $table->date('fecha');
-            $table->integer('id_ses')->unsigned();
+            $table->integer('ses_id')->unsigned();
 
-            $table->foreign('id_ses')->references('id')->on('sesion')->onDelete('cascade');
+            $table->foreign('ses_id')->references('id')->on('sesion')->onDelete('cascade');
             
             $table->timestamps();
         });

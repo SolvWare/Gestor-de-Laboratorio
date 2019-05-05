@@ -21,13 +21,13 @@ class AddMateriasTable extends Migration
         });
 
         //user & materias = user_materia
-        Schema::create('asignacion', function (Blueprint $table) {
+        Schema::create('user_materia', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_user')->unsigned();
-            $table->integer('cod_materia')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->integer('materia_id')->unsigned();
 
-            $table->foreign('id_user')->references('id')->on('users');
-            $table->foreign('cod_materia')->references('codMat')->on('materia');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('materia_id')->references('id')->on('materia');
 
             $table->timestamps();
         });

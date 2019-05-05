@@ -26,13 +26,13 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    // protected $hidden = [
+    //     'password', 'remember_token',
+    // ];
 
     public function rol()
     {
-        return $this->belongsTo('App\Rol');
+        return $this->belongsToMany('App\Rol');
     }
 
     public function portafolios()

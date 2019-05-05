@@ -28,6 +28,6 @@ class AddLaboratorioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Detalle_laboratorio');
+        Schema::dropIfExists('laboratorio');
     }
 }

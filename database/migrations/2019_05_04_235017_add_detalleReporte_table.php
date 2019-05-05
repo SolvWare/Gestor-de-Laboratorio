@@ -19,9 +19,9 @@ class AddDetalleReporteTable extends Migration
             $table->time('horaSalida');
             $table->string('observacion');
             $table->string('maquina');
-            $table->integer('id_repor')->unsigned();
+            $table->integer('repor_id')->unsigned();
 
-            $table->foreign('id_repor')->references('id')->on('reporte')->onDelete('cascade');
+            $table->foreign('repor_id')->references('id')->on('reporte')->onDelete('cascade');
             
             $table->timestamps();
         });

@@ -20,9 +20,6 @@ class CreateUsersTable extends Migration
             $table->string('nameUsr');
             $table->string('lastUsr');
             $table->string('password');
-            $table->integer('id_rol')->unsigned();
-
-            $table->foreign('id_rol')->references('id')->on('rol')->onDelete('cascade');
 
             $table->rememberToken();
             $table->timestamps();

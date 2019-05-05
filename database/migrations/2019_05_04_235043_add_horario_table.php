@@ -18,23 +18,23 @@ class AddHorarioTable extends Migration
             $table->string('Dia');
             $table->time('horaInicio');
             $table->time('horaFin');
-            $table->integer('id_lab');
-            $table->integer('id_mat');
+            $table->integer('labo_id')->unsigned();
+            $table->integer('mat_id')->unsigned();
 
-            $table->foreign('id_lab')->references('id')->on('laboratorio')->onDelete('cascade');
-            $table->foreign('id_mat')->references('id')->on('materia')->onDelete('cascade');
+            $table->foreign('labo_id')->references('id')->on('users');
+            $table->foreign('mat_id')->references('id')->on('materia');
 
             $table->timestamps();
         });
 
         //usuario & horario
-        Schema::create('asignar', function (Blueprint $table) {
+        Schema::create('user_horario', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_hor')->unsigned();
-            $table->integer('cod_sis')->unsigned();
+            $table->integer('hor_id')->unsigned();
+            $table->integer('user_id')->unsigned();
 
-            $table->foreign('id_hor')->references('id')->on('horario');
-            $table->foreign('cod_sis')->references('cosis')->on('users');
+            $table->foreign('hor_id')->references('id')->on('horario');
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
         });
@@ -47,6 +47,6 @@ class AddHorarioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Detalle_horario');
+        Schema::dropIfExists('horario');
     }
 }
