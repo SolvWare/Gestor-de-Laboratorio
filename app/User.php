@@ -14,8 +14,11 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    protected $table = "users";
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'codsis', 'ci', 'nameUsr', 'lastUsr','password', 'id_rol',
     ];
 
     /**
@@ -26,4 +29,29 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function rol()
+    {
+        return $this->belongsTo('App\Rol');
+    }
+
+    public function portafolios()
+    {
+        return $this->hasMany('App\Portafolio');
+    }
+
+    public function sesiones()
+    {
+        return $this->hasMany('App\Sesion');
+    }
+
+    public function materias()
+    {
+        return $this->belongsToMany('App\Materia');
+    }
+
+    public function horarios()
+    {
+        return $this->belongsToMany('App\Horario');
+    }
 }

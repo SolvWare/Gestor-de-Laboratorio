@@ -4,16 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Laboratorio extends Model
+class Grupo extends Model
 {
-    protected $table = "laboratorio";
+    protected $table = "grupos";
 
     protected $fillable = [
         'nombreLab', 'capacidad',
     ];
 
-    public function horarios()
+    public function materia()
     {
-        return $this->hasMany('App\Horario');
+        return $this->belongsTo('App\Materia');
     }
 }

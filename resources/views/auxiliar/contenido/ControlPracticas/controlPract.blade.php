@@ -10,7 +10,7 @@
                 </div>
             </div>
             
-    <div class="d-flex justify-content-center pt-0" style="position: relative; height: 545px; margin-top: .5rem; overflow: auto;">
+    <div class="d-flex justify-content-center pt-0 " style="position: relative; height: 545px; margin-top: .5rem; overflow: auto;">
         <div class="w-75">
             <div class="pl-1 pr-2 p-3 ">
                 @include('administrador.opcion.confirmacion')

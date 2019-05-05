@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsuariosTable extends Migration
+class AddLaboratorioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateUsuariosTable extends Migration
      */
     public function up()
     {
-        Schema::create('usuarios', function (Blueprint $table) {
+        Schema::create('laboratorio', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('codSis');
-            $table->string('ciUsr');
-            $table->string('nameUsr',30);
-            $table->string('lastUsr',30);
-            $table->string('rol',30);
-            $table->string('materia',30);
-            $table->string('grupo',30);
+            $table->string('nombreLab');
+            $table->integer('capacidad');
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ class CreateUsuariosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuarios');
+        Schema::dropIfExists('Detalle_laboratorio');
     }
 }
