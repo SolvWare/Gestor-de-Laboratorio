@@ -43,4 +43,4 @@ Route::post('/importUsr', 'ImportController@import');
 
 Route::resource('laboratorio', 'LaboratorioController');
 Route::get('listadoL','LaboratorioController@listado');
-
+Route::resource('horario', 'HorarioController');

@@ -16,6 +16,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/listadoL">Laboratorios</a>
                 </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="/listadoH">Horarios</a>
+                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <a class="text-light text-center my-2 my-sm-0"  href="/login"><i class="fas fa-user-circle " style="font-size:30px;" ></i></a>

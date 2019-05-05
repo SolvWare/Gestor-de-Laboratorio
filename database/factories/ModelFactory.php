@@ -73,3 +73,12 @@ $factory->define(App\Laboratorio::class, function (Faker\Generator $faker) {
         'estado'    => $faker->randomElement($array = array ('Habilitado','Deshabilitado')),
     ];
 });
+$factory->define(App\Horario::class, function (Faker\Generator $faker) {
+    return [
+        'id_lab' => $id_lab
+        'dia' => $faker->randomElement($array = array ('Lunes','Martes','Miercoles','Jueves','Viernes','Sabado')),
+        'hora_ini'   => $hora_ini
+        'hora_fin'   => $hora_fin
+        'estado'     => $faker->randomElement($array = array ('Habilitado','Deshabilitado')),
+    ];
+});

@@ -48,6 +48,24 @@
                     </ul>
                 </div>
             </div>
+
+			<div class="">
+                <div class="card-header" role="tab" id="headingThree">
+                    <h6 class="mb-0">
+                        <a class="collapsed text-dark" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                            <strong>Administrar Horarios</strong>
+                        </a>
+                    </h6>
+                </div>
+                
+                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a class="text-dark" href="/horario/create">Registrar</a></li>
+                        <li class="list-group-item"><a class="text-dark" href="/horario">Listar Editar Deshabilitar</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="">
                 <div class="card-header" role="tab" id="headingFour">
                     <h6 class="mb-0">
