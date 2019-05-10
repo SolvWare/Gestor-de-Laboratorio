@@ -4,14 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Usuario;
+use App\Sesion;
+use App\File;
+use App\Rol;
 use App\Http\Requests\UsuarioRequest;
 use DB;
 
 class UsuarioController extends Controller
 {
     public function index(){
-        $usuarios = Usuario::orderBy('id', 'DESC')->get();
+        // $usuarios = Usuario::orderBy('id', 'DESC')->get();
+        // return view('administrador.pagina.usuario.usrBuscar', compact('usuarios'));
+        $usuarios = Usuario::orderBy('id','DESC')
+        ->join('usuarios as user','user.id','=','rol_usuario.rol_id')
+        ->get();
         return view('administrador.pagina.usuario.usrBuscar', compact('usuarios'));
+      // return view('administrador.pagina.estudiante.usrEstudiante', compact('usuarios','materias','rols'));
     }
     public function create(){
         return view('administrador.pagina.usuario.usrRegistro');
@@ -45,9 +53,9 @@ class UsuarioController extends Controller
         $usuario->ciU = $request->input('ciU');
         $usuario->nameU = $request->input('nameU');
         $usuario->lastU = $request->input('lastU');
-        $usuario->rol = $request->input('rol');
-        $usuario->materia = $request->input('materia');
-        $usuario->grupo = $request->input('grupo');
+        // $usuario->rol = $request->input('rol');
+        // $usuario->materia = $request->input('materia');
+       // $usuario->grupo = $request->input('grupo');
         $usuario->save();
         return redirect('usuario')->with('mensaje','Registro de Usuario exitoso');
     }
@@ -57,9 +65,9 @@ class UsuarioController extends Controller
         $usuario->ciU = $request->input('ciU');
         $usuario->nameU = $request->input('nameU');
         $usuario->lastU = $request->input('lastU');
-        $usuario->rol = $request->input('rol');
-        $usuario->materia = $request->input('materia');
-        $usuario->grupo = $request->input('grupo');
+        // $usuario->rol = $request->input('rol');
+        // $usuario->materia = $request->input('materia');
+        // $usuario->grupo = $request->input('grupo');
         $usuario->save();
         return redirect('usuario')->with('mensaje','Actializacion de Usuario exitoso');
     }

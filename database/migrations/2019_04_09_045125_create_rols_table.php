@@ -24,6 +24,7 @@ class CreateRolsTable extends Migration
             $table->string('prib5')->nullable();
             $table->string('prib6')->nullable();
             $table->string('estado')->default='Habilitado';
+            
             $table->timestamps();
         });
     }

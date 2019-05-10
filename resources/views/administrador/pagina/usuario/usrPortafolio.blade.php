@@ -21,16 +21,17 @@
     </header>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-0 m-0 pl-5">
-            <li class="breadcrumb-item"><a class="black-text" href="/">Home</a></li>
-            <li class="breadcrumb-item active">Iniciar sesion</li>
+            <li class="breadcrumb-item"><a class="black-text" href="/admi">Administrador</a></li>
+            <li class="breadcrumb-item"><a class="black-text" href="/materia/create">Materias</a></li>
+            <li class="breadcrumb-item active">Registrar</li>
         </ol>
     </nav>
     <section class="d-flex text-white h-75 mt-1">
         <div class="w-25 d-inline-block">
-            @include('inicio.menu')
+            @include('administrador.opcion.menu')
         </div>
         <div class="w-100 d-inline-block mr-1 ml-1">
-            @include('login.contenido.loginForm')
+            @include('administrador.contenido.usuario.portafolio')
         </div>
         <div class="w-25 d-inline-block">
             @include('inicio.link')

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Laboratorio;
+use App\Horario;
 use App\Http\Requests\LaboratorioRequest;
 
 class LaboratorioController extends Controller

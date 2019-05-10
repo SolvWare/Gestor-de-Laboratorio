@@ -33,6 +33,21 @@
                 </div>
             </div>
             <div class="">
+                <div class="card-header" role="tab" id="headingTwo">
+                    <h6 class="mb-0">
+                        <a class="collapsed text-dark" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <strong>Administrar Inscripcion</strong>
+                        </a>
+                    </h6>
+                </div>
+                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a class="text-dark" href="/editInscripcion">Inscribir</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="">
                 <div class="card-header" role="tab" id="headingThree">
                     <h6 class="mb-0">
                         <a class="collapsed text-dark" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">

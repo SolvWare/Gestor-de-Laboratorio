@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Materia;
+use App\Usuario;
 use App\Http\Requests\MateriaRequest;
 
 class MateriaController extends Controller
@@ -11,7 +12,9 @@ class MateriaController extends Controller
     public function index(){
         $materias = Materia::orderBy('id', 'DESC')->get();
         return view('administrador.pagina.materia.matListado', compact('materias'));
+        
     }
+
     public function create(){
         return view('administrador.pagina.materia.matRegistro');
     }
@@ -51,7 +54,7 @@ class MateriaController extends Controller
         $materia = Materia::find($id);
         $materia->codeM = $request->input('codeM');
         $materia->nameM = $request->input('nameM');
-        $materia->numGM = $request->input('numGM');
+        //$materia->numGM = $request->input('numGM');
         $materia->save();
         return redirect('materia')->with('mensaje','Actializacion de Materia exitoso');
     }

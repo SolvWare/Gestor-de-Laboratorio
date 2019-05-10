@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email','password',
     ];
 
     /**
@@ -26,4 +26,22 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    //add for fradev
+    public function getIsAdmin()
+    {
+        return $this->role==0;
+    }
+    public function getIsDocente()
+    {
+        return $this->role==1;
+    }
+    public function getIsAux()
+    {
+        return $this->role==2;
+    }
+    public function getIsEst()
+    {
+        return $this->role==3;
+    }
 }

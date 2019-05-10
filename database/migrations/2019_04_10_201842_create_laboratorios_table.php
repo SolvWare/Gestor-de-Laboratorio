@@ -19,6 +19,7 @@ class CreateLaboratoriosTable extends Migration
             $table->integer('capL');
             $table->string('estado')->default='Habilitado';
             $table->timestamps();
+
         });
     }
 
