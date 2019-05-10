@@ -8,56 +8,41 @@ use App\Http\Requests\MateriaRequest;
 
 class MateriaController extends Controller
 {
-    public function index(){
-        $materias = Materia::orderBy('id', 'DESC')->get();
-        return view('administrador.pagina.materia.matListado', compact('materias'));
+    public function index()
+    {
+        $materias = Materia::paginate();
+        return view('materias.pagina.index', compact('materias'));
     }
     public function create(){
-        return view('administrador.pagina.materia.matRegistro');
-    }
-    public function show($id){
-        $materia = Materia::find($id);
-        return view('administrador.pagina.materia.matVista', compact('materia'));
+        return view('materias.pagina.create');
     }
     public function edit($id){
         $materia = Materia::find($id);
-        return view('administrador.pagina.materia.matEditar', compact('materia'));
+        return view('materias.pagina.edit', compact('materia'));
+    }
+    public function show($id){
+        $materia = Materia::find($id);
+        return view('materias.pagina.show', compact('materia'));
     }
     public function destroy($id){
-        /*$materia = Materia::find($id);
-        $materia->delete();
-        return back()->with('info', 'el materia fue eliminado');*/
         $materia = Materia::find($id);
-		if($materia->estado == 'Habilitado')
-		{
-		$materia->estado = 'Deshabilitado';
-        $materia->save();
-		}else{
-		$materia->estado = 'Habilitado';
-        $materia->save();
-		}
-        return redirect('materia');
+        $materia->delete();
+        return back()->with('mensaje', 'La Materia fue eliminada');
     }
-    
     public function store(MateriaRequest $request){
-        $materia = new Materia();
-        $materia->codeM = $request->input('codeM');
-        $materia->nameM = $request->input('nameM');
-        $materia->numGM = $request->input('numGM');
+        $materia = Materia::create($request->all());
         $materia->save();
-        return redirect('materia')->with('mensaje','Registro de Materia exitoso');
+        return redirect('materias')->with('mensaje','Registro de Materia exitoso');
     }
     public function update(MateriaRequest $request, $id){
         $materia = Materia::find($id);
-        $materia->codeM = $request->input('codeM');
-        $materia->nameM = $request->input('nameM');
-        $materia->numGM = $request->input('numGM');
-        $materia->save();
-        return redirect('materia')->with('mensaje','Actializacion de Materia exitoso');
+        $materia->update($request->all());
+
+        return redirect('materias')->with('mensaje','Actializacion de Materia exitoso');
     }
 
     public function listado(){
         $materias = Materia::orderBy('id', 'DESC')->where('estado','=','Habilitado')->get();
-        return view('materias', compact('materias'));
+        return view('lista.materia.index', compact('materias'));
     }
 }

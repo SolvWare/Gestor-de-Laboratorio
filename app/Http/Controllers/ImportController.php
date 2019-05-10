@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\usuario;
+use App\User;
 use Session;
 use Excel;
 use File;
@@ -18,8 +18,7 @@ class ImportController extends Controller
      */
     public function index()
     {
-        //
-        return view('administrador.pagina.usuario.usrImportar');
+        return view('users.pagina.import');
     }
     public function import(Request $request)
     {
@@ -38,99 +37,43 @@ class ImportController extends Controller
                 if(!empty($data) && $data->count()){
                     foreach ($data as $key => $value){
                         $insert[] = [
-                            'codSis' =>$value-> codsis,
-                            'ciU' => $value-> ciu,
-                            'nameU' =>$value-> nameu,
+                            'id'=>$value-> id,
+                            'name' =>$value-> name,
                             'lastU' => $value-> lastu,
-                            'rol' => $value-> rol,
-                            'materia' => $value-> materia,
-                            'grupo' => $value-> grupo,
+                            'email' =>$value-> email,
+                            'password' => $value-> password,
+                            'ci' => $value-> ci,
+                            'estado' => $value-> estado,
+                        ];
+                        $inserte[] = [
+                            'materia_id' =>$value-> materia_id,
+                            'user_id' => $value-> user_id,
+                        ];
+                        $insertee[] = [
+                            'role_id' =>$value-> role_id,
+                            'user_id' => $value-> user_id,
                         ];
                     }
                     if(!empty($insert)){
-                        $insertData = DB::table('usuarios')->insert($insert);
+                        $insertData = DB::table('users')->insert($insert);
+                        $insertDatae = DB::table('materia_user')->insert($inserte);
+                        $insertDatae = DB::table('role_user')->insert($insertee);
                         
                         if($insertData){
                             Session::flash('succes','se import satisfactoriamene');
                         }else{
                             Session::flash('error','Error en insercion de datos');
-                            return redirect('usuario');
+                            return redirect('users');
                         }
 
                     }
                 }
-                return redirect('usuario');
+                return redirect('users');
             }else{
                 Session:: flash('error','File is a' .$extension. 'file.!! Please upload a valid xls/csv file ..!!') ;
-                return redirect('usuario');
+                return redirect('users');
             
             }
         }
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

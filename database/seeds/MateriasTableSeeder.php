@@ -12,6 +12,20 @@ class MateriasTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Materia::class, 10)->create();
+        Materia::create([
+            'nameM'     => 'Introduccion a la Programacion',
+            'grupo'     => '1',
+            'estado'    => 'Habilitado',
+        ]);
+        Materia::create([
+            'nameM'     => 'Introduccion a la Programacion',
+            'grupo'     => '2',
+            'estado'    => 'Habilitado',
+        ]);
+        Materia::create([
+            'nameM'     => 'Introduccion a la Programacion',
+            'grupo'     => '3',
+            'estado'    => 'Habilitado',
+        ]);
     }
 }

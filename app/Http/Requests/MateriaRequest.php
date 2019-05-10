@@ -24,9 +24,7 @@ class MateriaRequest extends FormRequest
     public function rules()
     {
         return [
-            'codeM' => 'required | Min:6 | Max:6',
             'nameM' => 'required | Min:5 | Max:60',
-            'numGM' => 'required | Min:1 | Max:1',
         ];
     }
 }

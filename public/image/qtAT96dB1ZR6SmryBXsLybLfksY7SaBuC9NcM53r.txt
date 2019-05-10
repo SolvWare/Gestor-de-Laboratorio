@@ -1,0 +1,38 @@
+<tr class="">
+                                                <td class="pl-2">{{$sesione->inscripcione->user->name}} {{$sesione->inscripcione->user->lastU}}</td>
+                                                <td>{{$sesione->inscripcione->horario->diaH}}</td>
+                                                <td>{{$sesione->inscripcione->horario->periodoH}}</td>
+                                                <td>{{$sesione->inscripcione->horario->laboratorio->nameL}}</td>
+                                                <td>{{$sesione->inscripcione->horario->materia->nameM}}</td>
+                                                <td>{{$sesione->created_at}}</td>
+                                                @can('sesiones.show')
+                                                    <td class="text-center">
+                                                        <form action="{{ route('sesiones.show', $sesione->id) }}" method="GET">
+                                                            <button class=""><i class="fas fa-eye fa-lg"></i></button>
+                                                        </form>
+                                                    </td>
+                                                @endcan
+                                                @can('sesiones.edit')
+                                                    <td class="text-center">
+                                                        <form action="{{ route('sesiones.edit', $sesione->id) }}" method="GET">
+                                                            <button class=""><i class="fas fa-edit fa-lg"></i></button>
+                                                        </form>
+                                                    </td>
+                                                @endcan
+                                                @can('sesiones.destroy')
+                                                    <td class="text-center">
+                                                        <form action="{{ route('sesiones.destroy', $sesione->id) }}" method="POST">
+                                                            {{ csrf_field() }}
+                                                            <input type="hidden" name="_method" value="DELETE">
+                                                            <button class=""><i class="fas fa-check-square fa-lg"></i></button>
+                                                        </form>
+                                                    </td>
+                                                @endcan
+                                                @can('addproductos.show')
+                                                    <td class="text-center">
+                                                        <form action="{{ route('addproductos.show', $sesione->id) }}" method="GET">
+                                                            <button class="">Añadir Producto</button>
+                                                        </form>
+                                                    </td>
+                                                @endcan
+                                            </tr>

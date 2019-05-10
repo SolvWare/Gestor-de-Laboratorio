@@ -97,28 +97,14 @@ return [
     |
     */
     'attributes' => [
-        'codSis'    => 'Codigo SIS',
-        'ciU'       => 'Cedula de Identidad',
-        'nameU'     => 'Nombre de Usuario',
-        'lastU'     => 'Apellido de Usuario',
-        'rol'       => 'Rol',
-        'materia'   => 'Materia',
-        'grupo'     => 'Grupo',
+
+        'name'    => 'Nombre',
+        'slug'       => 'URL Amigable',
+
         
-        'codeR' => 'Codigo de Rol',
-        'nameR' => 'Nombre de Rol',
-        'prib1' => 'Pribilegio 1',
-        'prib2' => 'Pribilegio 2',
-        'prib3' => 'Pribilegio 3',
-        'prib4' => 'Pribilegio 4',
-        'prib5' => 'Pribilegio 5',
-        'prib6' => 'Pribilegio 6',
-        
-        'codeM' => 'Codigo de Materia',
-        'nameM' => 'Nombre de Materia',
-        'numGM' => 'Numero de Grupro',
-        
-        'nameL' => 'Nombre de Laboratorio',
-        'capL' => 'Capacidad de Laboratorio'
+        'name'     =>'Nombre',
+        'lastU'  =>'Apellido',
+        'email'     =>'Codigo SIS',
+        'password'  =>'CI',
     ],
 ];
