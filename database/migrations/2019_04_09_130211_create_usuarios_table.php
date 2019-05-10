@@ -19,11 +19,9 @@ class CreateUsuariosTable extends Migration
             $table->integer('ciU');
             $table->string('nameU',30);
             $table->string('lastU',30);
-            $table->string('rol',30);
-            $table->string('materia',60);
-            $table->integer('grupo');
             $table->string('estado')->default='Habilitado';
             $table->timestamps();
+
         });
     }
 

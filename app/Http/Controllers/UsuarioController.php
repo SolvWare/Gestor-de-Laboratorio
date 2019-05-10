@@ -12,6 +12,7 @@ class UsuarioController extends Controller
     public function index(){
         $usuarios = Usuario::orderBy('id', 'DESC')->get();
         return view('administrador.pagina.usuario.usrBuscar', compact('usuarios'));
+      // return view('administrador.pagina.estudiante.usrEstudiante', compact('usuarios','materias','rols'));
     }
     public function create(){
         return view('administrador.pagina.usuario.usrRegistro');
@@ -45,9 +46,9 @@ class UsuarioController extends Controller
         $usuario->ciU = $request->input('ciU');
         $usuario->nameU = $request->input('nameU');
         $usuario->lastU = $request->input('lastU');
-        $usuario->rol = $request->input('rol');
-        $usuario->materia = $request->input('materia');
-        $usuario->grupo = $request->input('grupo');
+        // $usuario->rol = $request->input('rol');
+        // $usuario->materia = $request->input('materia');
+       // $usuario->grupo = $request->input('grupo');
         $usuario->save();
         return redirect('usuario')->with('mensaje','Registro de Usuario exitoso');
     }
@@ -57,9 +58,9 @@ class UsuarioController extends Controller
         $usuario->ciU = $request->input('ciU');
         $usuario->nameU = $request->input('nameU');
         $usuario->lastU = $request->input('lastU');
-        $usuario->rol = $request->input('rol');
-        $usuario->materia = $request->input('materia');
-        $usuario->grupo = $request->input('grupo');
+        // $usuario->rol = $request->input('rol');
+        // $usuario->materia = $request->input('materia');
+        // $usuario->grupo = $request->input('grupo');
         $usuario->save();
         return redirect('usuario')->with('mensaje','Actializacion de Usuario exitoso');
     }

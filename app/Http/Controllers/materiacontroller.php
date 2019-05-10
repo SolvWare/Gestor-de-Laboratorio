@@ -11,7 +11,9 @@ class MateriaController extends Controller
     public function index(){
         $materias = Materia::orderBy('id', 'DESC')->get();
         return view('administrador.pagina.materia.matListado', compact('materias'));
+        
     }
+
     public function create(){
         return view('administrador.pagina.materia.matRegistro');
     }
@@ -51,7 +53,7 @@ class MateriaController extends Controller
         $materia = Materia::find($id);
         $materia->codeM = $request->input('codeM');
         $materia->nameM = $request->input('nameM');
-        $materia->numGM = $request->input('numGM');
+        //$materia->numGM = $request->input('numGM');
         $materia->save();
         return redirect('materia')->with('mensaje','Actializacion de Materia exitoso');
     }

@@ -13,6 +13,16 @@
               <i class="fas fa-search text-dark" aria-hidden="true"></i>
             </form>
           </div>
+          <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Inscripcion Laboratorios
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="/editInscripcion">Estudiantes</a>
+                  <a class="dropdown-item" href="#">Docentes</a>
+                  <a class="dropdown-item" href="#">Auxiliares</a>
+              </div>
+          </div>
         </div>
       </div>
       <div class="pl-2 pr-2" style="position: relative; height: 490px; margin-top: .5rem; overflow: auto;">

@@ -17,7 +17,7 @@
 <body class="h-100">
 
     <header class="h-25">
-        @include('inicio.nav')
+         @include('inicio.navNavegacion')
     </header>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-0 m-0 pl-5">

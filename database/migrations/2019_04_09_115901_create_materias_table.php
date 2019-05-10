@@ -20,6 +20,7 @@ class CreateMateriasTable extends Migration
             $table->integer('numGM');
             $table->string('estado')->default='Habilitado';
             $table->timestamps();
+
         });
     }
 
